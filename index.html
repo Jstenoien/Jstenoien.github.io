@@ -3,14 +3,13 @@
 		<meta charset="UTF-8">
 		<title>State Law Reference</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="/statelaw/favicon.ico" sizes="16x16 32x32 64x64 96x96 128x128 144x144 192x192 196x196 256x256 512x512">
-		<link rel="stylesheet" href="/css/statelaw.css" />
-		<script src="/jquery/jquery.min.js"></script>
-		<script src="/js/9x8.js"></script>
-		<link rel="icon" type="image/png" sizes="32x32" href="/statelaw/32.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/statelaw/192.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/statelaw/16.png">
-		<link rel="manifest" href="/statelaw/manifest.webmanifest">
+		<link rel="shortcut icon" href="icon/statelaw/favicon.ico" sizes="16x16 32x32 64x64 96x96 128x128 144x144 192x192 196x196 256x256 512x512">
+		<link rel="stylesheet" href="css/statelaw.css" />
+		<script src="js/9x8.js"></script>
+		<link rel="icon" type="image/png" sizes="32x32" href="icon/statelaw/32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="icon/statelaw/192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="icon/statelaw/16.png">
+		<link rel="manifest" href="icon/statelaw/manifest.webmanifest">
 		<meta name="theme-color" content="#78278b">
 		<meta name="Description" content="Web App Wrapper for the State Law Reference PowerApp">
 		<meta name="Author" content="Jared Stenoien">
@@ -19,20 +18,20 @@
 		<noscript>
 			<p>Please enable Javascript to use this page.</p>
 		</noscript>
-		<div id="divwrapper">
-			<img id="splash" src="svg/splash_statelaw.svg" />
-			<iframe id="powerappframe" src="https://apps.powerapps.com/play/10119cbb-e254-4249-9b8c-353d128dfdb0?hidenavbar=true" allowfullscreen></iframe>
+		<div class="PowerAppWrapper">
+			<img class="ratio" src="svg/splash_statelaw.svg" />
+			<iframe class="PowerAppFrame" src="https://apps.powerapps.com/play/10119cbb-e254-4249-9b8c-353d128dfdb0?hidenavbar=true" allowfullscreen></iframe>
 		</div>
 		<script>
 			// Register the service worker
 			if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-			// Registration was successful
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-			}).catch(function(err) {
-			// registration failed :(
-			console.log('ServiceWorker registration failed: ', err);
-			});
+				navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+				// Registration was successful
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}).catch(function(err) {
+				// registration failed :(
+				console.log('ServiceWorker registration failed: ', err);
+				});
 			}
 		</script>
 	</body>
