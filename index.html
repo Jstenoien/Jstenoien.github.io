@@ -6,7 +6,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="icon/statelaw/favicon.ico" sizes="16x16 32x32 64x64 96x96 128x128 144x144 192x192 196x196 256x256 512x512">
 		<link rel="stylesheet" href="css/statelaw.css" />
-		<script src="js/9x8.js"></script>
+		<script >
+			var Link = window.location.href
+			var AppName = getParameter(Link, 'App')
+			
+			function getParameter(Link,param){
+				url = Link.split('?');
+				var pattern = new RegExp(param+'=(.*?)(;|&|$)','gi');
+				return url[1].split(pattern)[1];
+			}
+			
+			switch (AppName) {
+				case "StateLaw":
+					var WinHeight = 800
+					var WinWidth = 900
+					var SVG_Splash = "svg/splash_9x8.svg"
+					var AppID = "10119cbb-e254-4249-9b8c-353d128dfdb0"
+					break;
+				case "TechDashboard":
+					var WinHeight = 900
+					var WinWidth = 1600
+					var SVG_Splash = "svg/splash_16x9.svg"
+					var AppID = "ebe50e93-8baf-43c2-9587-daa36ec27267"
+					break;
+				default:
+					var WinHeight = 800
+					var WinWidth = 900
+					var SVG_Splash = "svg/splash_statelaw.svg"
+					var AppID = "10119cbb-e254-4249-9b8c-353d128dfdb0"
+					break;
+			}
+
+
+			function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,150)};return c};
+
+			on_resize(function() {
+							var targetInnerHeight = window.innerWidth * WinHeight / WinWidth;
+							var heightDiff = window.outerHeight - window.innerHeight;
+							var targetOuterHeight = targetInnerHeight + heightDiff;
+							window.resizeTo(window.outerWidth, targetOuterHeight);
+							location.reload();
+			});
+		</script>
 		<link rel="icon" type="image/png" sizes="32x32" href="icon/statelaw/32.png">
 		<link rel="icon" type="image/png" sizes="192x192" href="icon/statelaw/192.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="icon/statelaw/16.png">
@@ -19,11 +60,12 @@
 		<noscript>
 			<p>Please enable Javascript to use this page.</p>
 		</noscript>
-		<div class="PowerAppWrapper">
-			<img class="ratio" src="svg/splash_statelaw.svg" />
-			<iframe class="PowerAppFrame" src="https://apps.powerapps.com/play/10119cbb-e254-4249-9b8c-353d128dfdb0?hidenavbar=true" allowfullscreen></iframe>
+		<div id="PowerAppWrapper">
+			<img id="ratio" src=""/>
+			<iframe id="PowerAppFrame" src="" allowfullscreen></iframe>
 		</div>
 		<script>
+			document.getElementById('PowerAppWrapper').innerHTML = '<img id=ratio src=' + SVG_Splash + '></img> <iframe id="PowerAppFrame" src="https://apps.powerapps.com/play/' + AppID + '?hidenavbar=true" allowfullscreen></iframe>'
 			// Register the service worker
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('/service-worker.js').then(function(registration) {

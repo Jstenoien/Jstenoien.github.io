@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script defer>
+var Link = window.location.href
+var WinHeight = getParameter(Link, 'H')
+var WinWidth = getParameter(Link,'W')
+
+function getParameter(Link,param){
+    url = Link.split('?');
+    var pattern = new RegExp(param+'=(.*?)(;|&|$)','gi');
+    return url[1].split(pattern)[1];
+}
+        </script>
+    </head>
+    <body>
+        <div>
+            <span id="WindowHeight"></span>
+            <br>
+            <span id="WindowWidth"></span>
+        </div>
+        <script>
+document.getElementById("WindowHeight").innerHTML = WinHeight
+document.getElementById("WindowWidth").innerHTML = WinWidth
+        </script>
+    </body>
+</html>
