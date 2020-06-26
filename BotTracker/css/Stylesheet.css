@@ -1,0 +1,166 @@
+HTML {
+	background-color: black;
+	font-family: "Verdana";
+}
+
+#Container {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	width: 8.5in;
+	height: 11in;
+	grid-template-columns: 2.5% 15% 1fr 1fr 1fr 1fr 10% 2.5%;
+	grid-template-rows: 2.25% 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr 2.25%;
+	grid-template-areas: ". . . . . . . ." ". Left Desk11 Desk12 Desk13 Desk14 Right ." ". Left Desk7 Desk8 Desk9 Desk10 Right ." ". Left Desk3 Desk4 Desk5 Desk6 Right ." ". Left Bots Desk0 Desk1 Desk2 Right ." ". Left Bots . . . Right ." ". Left Desk23 Desk24 Desk25 Desk26 Right ." ". Left Desk22 Overflow1 Overflow2 Desk27 Right ." ". Left Desk21 Overflow1 Overflow2 . Right ." ". Left Desk20 Overflow1 Overflow2 . Right ." ". Left Desk19 Overflow1 Overflow2 . Right ." ". Left Desk18 Desk17 Desk16 Desk15 Right ." ". . . . . . . ."
+}
+
+#Left {
+	grid-area: Left;
+}
+
+#Desk0 {
+	grid-area: Desk0;
+}
+
+#Desk1 {
+	grid-area: Desk1;
+}
+
+#Desk2 {
+	grid-area: Desk2;
+}
+
+#Desk3 {
+	grid-area: Desk3;
+}
+
+#Desk4 {
+	grid-area: Desk4;
+}
+
+#Desk5 {
+	grid-area: Desk5;
+}
+
+#Desk6 {
+	grid-area: Desk6;
+}
+
+#Desk7 {
+	grid-area: Desk7;
+}
+
+#Desk8 {
+	grid-area: Desk8;
+}
+
+#Desk9 {
+	grid-area: Desk9;
+}
+
+#Desk10 {
+	grid-area: Desk10;
+}
+
+#Desk11 {
+	grid-area: Desk11;
+}
+
+#Desk12 {
+	grid-area: Desk12;
+}
+
+#Desk13 {
+	grid-area: Desk13;
+}
+
+#Desk14 {
+	grid-area: Desk14;
+}
+
+#Desk15 {
+	grid-area: Desk15;
+}
+
+#Desk16 {
+	grid-area: Desk16;
+}
+
+#Desk17 {
+	grid-area: Desk17;
+}
+
+#Desk18 {
+	grid-area: Desk18;
+}
+
+#Desk19 {
+	grid-area: Desk19;
+}
+
+#Desk20 {
+	grid-area: Desk20;
+}
+
+#Desk21 {
+	grid-area: Desk21;
+}
+
+#Desk22 {
+	grid-area: Desk22;
+}
+
+#Desk23 {
+	grid-area: Desk23;
+}
+
+#Desk24 {
+	grid-area: Desk24;
+}
+
+#Desk25 {
+	grid-area: Desk25;
+}
+
+#Desk26 {
+	grid-area: Desk26;
+}
+
+#Desk27 {
+	grid-area: Desk27;
+}
+
+div.Desk {
+	position: relative;
+}
+
+span.CompName {
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+	font-size: 0.5em;
+}
+
+span.BotName {
+	position: absolute;
+	bottom: 2%;
+	right: 4%;
+	font-size: 0.55em;
+	font-weight: bold;
+}
+
+#Bots {
+	grid-area: Bots;
+}
+
+#Overflow1 {
+	grid-area: Overflow1;
+}
+
+#Overflow2 {
+	grid-area: Overflow2;
+}
+
+#Right {
+	grid-area: Right;
+}
