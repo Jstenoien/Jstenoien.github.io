@@ -7,8 +7,10 @@ HTML {
 	margin: 0;
 	padding: 0;
 	display: grid;
-	width: 8.5in;
-	height: 11in;
+	/*width: 8.5in;
+	height: 11in;*/
+	width: 100%;
+	height: 100%;
 	grid-template-columns: 2.5% 15% 1fr 1fr 1fr 1fr 10% 2.5%;
 	grid-template-rows: 2.25% 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr 2.25%;
 	grid-template-areas: ". . . . . . . ." ". Left Desk11 Desk12 Desk13 Desk14 Right ." ". Left Desk7 Desk8 Desk9 Desk10 Right ." ". Left Desk3 Desk4 Desk5 Desk6 Right ." ". Left Bots Desk0 Desk1 Desk2 Right ." ". Left Bots . . . Right ." ". Left Desk23 Desk24 Desk25 Desk26 Right ." ". Left Desk22 Overflow1 Overflow2 Desk27 Right ." ". Left Desk21 Overflow1 Overflow2 . Right ." ". Left Desk20 Overflow1 Overflow2 . Right ." ". Left Desk19 Overflow1 Overflow2 . Right ." ". Left Desk18 Desk17 Desk16 Desk15 Right ." ". . . . . . . ."
