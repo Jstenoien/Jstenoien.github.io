@@ -95,34 +95,42 @@ div {
 
 #Desk11 {
 	grid-area: Desk11;
+	margin-top: 1px;
 }
 
 #Desk12 {
 	grid-area: Desk12;
+	margin-top: 1px;
 }
 
 #Desk13 {
 	grid-area: Desk13;
+	margin-top: 1px;
 }
 
 #Desk14 {
 	grid-area: Desk14;
+	margin-top: 1px;
 }
 
 #Desk15 {
 	grid-area: Desk15;
+	margin-bottom: 1px;
 }
 
 #Desk16 {
 	grid-area: Desk16;
+	margin-bottom: 1px;
 }
 
 #Desk17 {
 	grid-area: Desk17;
+	margin-bottom: 1px;
 }
 
 #Desk18 {
 	grid-area: Desk18;
+	margin-bottom: 1px;
 }
 
 #Desk19 {
