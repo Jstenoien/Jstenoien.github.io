@@ -51,16 +51,16 @@ div {
 
 #LeftGutter {
   grid-area: LeftGutter;
-  margin-top: -1px;
+  margin-top: -2px;
   margin-right: -1px;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
 
 #RightGutter {
   grid-area: RightGutter;
-  margin-top: -1px;
+  margin-top: -2px;
   margin-left: -1px;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
 
 #NoteSpace {
