@@ -3,12 +3,12 @@
     "short_name": "Bot Tracker",
     "icons": [
         {
-            "src": "/BotTracker/android-chrome-192x192.png",
+            "src": "https://jstenoien.github.io/BotTracker/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/BotTracker/android-chrome-256x256.png",
+            "src": "https://jstenoien.github.io/BotTracker/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         }
