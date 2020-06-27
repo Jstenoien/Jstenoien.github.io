@@ -10,8 +10,6 @@ div {
 #Container {
 	margin: auto;
 	padding: 0;
-	padding-top: 1px;
-	padding-bottom: 1px;
 	display: grid;
   background-color: black;
 	width: 95%;
