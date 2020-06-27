@@ -3,21 +3,76 @@ HTML {
 	font-family: "Verdana";
 }
 
+div {
+  background-color: white;
+}
+
 #Container {
 	margin: 0;
 	padding: 0;
 	display: grid;
+  background-color: black;
 	/*width: 8.5in;
 	height: 11in;*/
 	width: 100%;
 	height: 100%;
 	grid-template-columns: 2.5% 15% 1fr 1fr 1fr 1fr 10% 2.5%;
 	grid-template-rows: 2.25% 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr 2.25%;
-	grid-template-areas: ". . . . . . . ." ". Left Desk11 Desk12 Desk13 Desk14 Right ." ". Left Desk7 Desk8 Desk9 Desk10 Right ." ". Left Desk3 Desk4 Desk5 Desk6 Right ." ". Left Bots Desk0 Desk1 Desk2 Right ." ". Left Bots . . . Right ." ". Left Desk23 Desk24 Desk25 Desk26 Right ." ". Left Desk22 Overflow1 Overflow2 Desk27 Right ." ". Left Desk21 Overflow1 Overflow2 . Right ." ". Left Desk20 Overflow1 Overflow2 . Right ." ". Left Desk19 Overflow1 Overflow2 . Right ." ". Left Desk18 Desk17 Desk16 Desk15 Right ." ". . . . . . . ."
+	grid-template-areas:
+  "TopGutter TopGutter TopGutter TopGutter TopGutter TopGutter TopGutter TopGutter"
+  "LeftGutter Left Desk11 Desk12 Desk13 Desk14 Right RightGutter"
+  "LeftGutter Left Desk7 Desk8 Desk9 Desk10 Right RightGutter"
+  "LeftGutter Left Desk3 Desk4 Desk5 Desk6 Right RightGutter"
+  "LeftGutter Left Bots Desk0 Desk1 Desk2 Right RightGutter"
+  "LeftGutter Left Bots MiddleGutter MiddleGutter MiddleGutter Right RightGutter"
+  "LeftGutter Left Desk23 Desk24 Desk25 Desk26 Right RightGutter"
+  "LeftGutter Left Desk22 Overflow1 Overflow2 Desk27 Right RightGutter"
+  "LeftGutter Left Desk21 Overflow1 Overflow2 NoteSpace Right RightGutter"
+  "LeftGutter Left Desk20 Overflow1 Overflow2 NoteSpace Right RightGutter"
+  "LeftGutter Left Desk19 Overflow1 Overflow2 NoteSpace Right RightGutter"
+  "LeftGutter Left Desk18 Desk17 Desk16 Desk15 Right RightGutter"
+  "BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter";
+  grid-gap: 1px;
+}
+
+#TopGutter {
+  grid-area: TopGutter;
+}
+
+#MiddleGutter {
+  grid-area: MiddleGutter;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+#BottomGutter {
+  grid-area: BottomGutter;
+}
+
+#LeftGutter {
+  grid-area: LeftGutter;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+#RightGutter {
+  grid-area: RightGutter;
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+}
+
+#NoteSpace {
+  grid-area: NoteSpace;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 
 #Left {
 	grid-area: Left;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 
 #Desk0 {
@@ -130,6 +185,8 @@ HTML {
 
 #Desk27 {
 	grid-area: Desk27;
+  border-right: 1px dashed black;
+  margin-right: -1px;
 }
 
 div.Desk {
@@ -153,6 +210,7 @@ span.BotName {
 
 #Bots {
 	grid-area: Bots;
+  margin-left: -1px;
 }
 
 #Overflow1 {
@@ -161,8 +219,18 @@ span.BotName {
 
 #Overflow2 {
 	grid-area: Overflow2;
+  margin-left: -1px;
 }
 
 #Right {
 	grid-area: Right;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.Unused {
+  border-left: 1px dashed black;
+  border-bottom: 1px dashed black;
+  margin-bottom: -1px;
+  margin-left: -1px;
 }
