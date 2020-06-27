@@ -1,4 +1,4 @@
-HTML {
+html {
 	background-color: white;
 	font-family: "Verdana";
 }
@@ -12,8 +12,6 @@ div {
 	padding: 0;
 	display: grid;
   background-color: black;
-	/*width: 8.5in;
-	height: 11in;*/
 	width: 95%;
 	height: 95%;
 	grid-template-columns: 15% 1fr 1fr 1fr 1fr 10%;
@@ -205,4 +203,8 @@ span.BotName {
   border-bottom: 1px dashed black;
   margin-bottom: -1px;
   margin-left: -1px;
+}
+
+ul {
+  list-style-type: none;
 }
