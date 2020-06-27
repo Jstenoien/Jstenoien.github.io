@@ -1,5 +1,5 @@
 HTML {
-	background-color: black;
+	background-color: white;
 	font-family: "Verdana";
 }
 
@@ -8,59 +8,35 @@ div {
 }
 
 #Container {
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	display: grid;
   background-color: black;
 	/*width: 8.5in;
 	height: 11in;*/
-	width: 100%;
-	height: 100%;
-	grid-template-columns: 2.5% 15% 1fr 1fr 1fr 1fr 10% 2.5%;
-	grid-template-rows: 2.25% 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr 2.25%;
+	width: 95%;
+	height: 95%;
+	grid-template-columns: 15% 1fr 1fr 1fr 1fr 10%;
+	grid-template-rows: 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas:
-  "TopGutter TopGutter TopGutter TopGutter TopGutter TopGutter TopGutter TopGutter"
-  "LeftGutter Left Desk11 Desk12 Desk13 Desk14 Right RightGutter"
-  "LeftGutter Left Desk7 Desk8 Desk9 Desk10 Right RightGutter"
-  "LeftGutter Left Desk3 Desk4 Desk5 Desk6 Right RightGutter"
-  "LeftGutter Left Bots Desk0 Desk1 Desk2 Right RightGutter"
-  "LeftGutter Left Bots MiddleGutter MiddleGutter MiddleGutter Right RightGutter"
-  "LeftGutter Left Desk23 Desk24 Desk25 Desk26 Right RightGutter"
-  "LeftGutter Left Desk22 Overflow1 Overflow2 Desk27 Right RightGutter"
-  "LeftGutter Left Desk21 Overflow1 Overflow2 NoteSpace Right RightGutter"
-  "LeftGutter Left Desk20 Overflow1 Overflow2 NoteSpace Right RightGutter"
-  "LeftGutter Left Desk19 Overflow1 Overflow2 NoteSpace Right RightGutter"
-  "LeftGutter Left Desk18 Desk17 Desk16 Desk15 Right RightGutter"
-  "BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter BottomGutter";
+  "Left Desk11 Desk12 Desk13 Desk14 Right"
+  "Left Desk7 Desk8 Desk9 Desk10 Right"
+  "Left Desk3 Desk4 Desk5 Desk6 Right"
+  "Left Bots Desk0 Desk1 Desk2 Right"
+  "Left Bots MiddleGutter MiddleGutter MiddleGutter Right"
+  "Left Desk23 Desk24 Desk25 Desk26 Right"
+  "Left Desk22 Overflow1 Overflow2 Desk27 Right"
+  "Left Desk21 Overflow1 Overflow2 NoteSpace Right"
+  "Left Desk20 Overflow1 Overflow2 NoteSpace Right"
+  "Left Desk19 Overflow1 Overflow2 NoteSpace Right"
+  "Left Desk18 Desk17 Desk16 Desk15 Right";
   grid-gap: 1px;
-}
-
-#TopGutter {
-  grid-area: TopGutter;
 }
 
 #MiddleGutter {
   grid-area: MiddleGutter;
   margin-left: -1px;
   margin-right: -1px;
-}
-
-#BottomGutter {
-  grid-area: BottomGutter;
-}
-
-#LeftGutter {
-  grid-area: LeftGutter;
-  margin-top: -2px;
-  margin-right: -1px;
-  margin-bottom: -2px;
-}
-
-#RightGutter {
-  grid-area: RightGutter;
-  margin-top: -2px;
-  margin-left: -1px;
-  margin-bottom: -2px;
 }
 
 #NoteSpace {
@@ -71,8 +47,6 @@ div {
 
 #Left {
 	grid-area: Left;
-  margin-top: -1px;
-  margin-bottom: -1px;
 }
 
 #Desk0 {
@@ -224,8 +198,6 @@ span.BotName {
 
 #Right {
 	grid-area: Right;
-  margin-top: -1px;
-  margin-bottom: -1px;
 }
 
 .Unused {
