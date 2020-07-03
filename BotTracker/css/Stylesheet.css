@@ -16,7 +16,7 @@ div {
 	display: grid;
 	background-color: black;
 	width: 100%;
-	min-height: -webkit-fill-available;
+	height: 100%;
 	grid-template-columns: 15% 1fr 1fr 1fr 1fr 10%;
 	grid-template-rows: 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas:
