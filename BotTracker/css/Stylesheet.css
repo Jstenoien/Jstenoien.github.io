@@ -4,7 +4,6 @@ html {
 }
 
 body {
-  height: 100vh;
 }
 
 div {
@@ -18,6 +17,7 @@ div {
 	background-color: black;
 	width: 95%;
 	height: 95%;
+	height: 100vh;
 	grid-template-columns: 15% 1fr 1fr 1fr 1fr 10%;
 	grid-template-rows: 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas:
