@@ -1,30 +1,29 @@
 html {
-	background-color: white;
-	font-family: "Verdana";
-	height: calc(var(--vh, 1vh) * 100);
+  background-color: white;
+  font-family: "Verdana";
 }
 
 #Container {
-	margin: auto;
-	padding: 0;
-	display: grid;
-	background-color: black;
-	width: 100%;
-	height: 100%;
-	grid-template-columns: 15% 1fr 1fr 1fr 1fr 10%;
-	grid-template-rows: 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-areas:
-  "Left Desk11 Desk12 Desk13 Desk14 Right"
-  "Left Desk7 Desk8 Desk9 Desk10 Right"
-  "Left Desk3 Desk4 Desk5 Desk6 Right"
-  "Left Bots Desk0 Desk1 Desk2 Right"
-  "Left Bots MiddleGutter MiddleGutter MiddleGutter Right"
-  "Left Desk23 Desk24 Desk25 Desk26 Right"
-  "Left Desk22 Overflow1 Overflow2 Desk27 Right"
-  "Left Desk21 Overflow1 Overflow2 NoteSpace Right"
-  "Left Desk20 Overflow1 Overflow2 NoteSpace Right"
-  "Left Desk19 Overflow1 Overflow2 NoteSpace Right"
-  "Left Desk18 Desk17 Desk16 Desk15 Right";
+  margin: auto;
+  padding: 0;
+  display: grid;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 15% 1fr 1fr 1fr 1fr 10%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2.25% 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "Left Desk12 Desk13 Desk14 Desk15 Right"
+    "Left Desk8 Desk9 Desk10 Desk11 Right"
+    "Left Desk4 Desk5 Desk6 Desk7 Right"
+    "Left Bots Desk1 Desk2 Desk3 Right"
+    "Left Bots MiddleGutter MiddleGutter MiddleGutter Right"
+    "Left Desk24 Desk25 Desk26 Desk27 Right"
+    "Left Desk23 Overflow1 Overflow2 Desk28 Right"
+    "Left Desk22 Overflow1 Overflow2 NoteSpace Right"
+    "Left Desk21 Overflow1 Overflow2 NoteSpace Right"
+    "Left Desk20 Overflow1 Overflow2 NoteSpace Right"
+    "Left Desk19 Desk18 Desk17 Desk16 Right";
   grid-gap: 1px;
 }
 
@@ -41,166 +40,162 @@ html {
 }
 
 #Left {
-	grid-area: Left;
-}
-
-#Desk0 {
-	grid-area: Desk0;
+  grid-area: Left;
 }
 
 #Desk1 {
-	grid-area: Desk1;
+  grid-area: Desk1;
 }
 
 #Desk2 {
-	grid-area: Desk2;
+  grid-area: Desk2;
 }
 
 #Desk3 {
-	grid-area: Desk3;
+  grid-area: Desk3;
 }
 
 #Desk4 {
-	grid-area: Desk4;
+  grid-area: Desk4;
 }
 
 #Desk5 {
-	grid-area: Desk5;
+  grid-area: Desk5;
 }
 
 #Desk6 {
-	grid-area: Desk6;
+  grid-area: Desk6;
 }
 
 #Desk7 {
-	grid-area: Desk7;
+  grid-area: Desk7;
 }
 
 #Desk8 {
-	grid-area: Desk8;
+  grid-area: Desk8;
 }
 
 #Desk9 {
-	grid-area: Desk9;
+  grid-area: Desk9;
 }
 
 #Desk10 {
-	grid-area: Desk10;
+  grid-area: Desk10;
 }
 
 #Desk11 {
-	grid-area: Desk11;
-	margin-top: 1px;
+  grid-area: Desk11;
 }
 
 #Desk12 {
-	grid-area: Desk12;
-	margin-top: 1px;
+  grid-area: Desk12;
 }
 
 #Desk13 {
-	grid-area: Desk13;
-	margin-top: 1px;
+  grid-area: Desk13;
 }
 
 #Desk14 {
-	grid-area: Desk14;
-	margin-top: 1px;
+  grid-area: Desk14;
 }
 
 #Desk15 {
-	grid-area: Desk15;
-	margin-bottom: 1px;
+  grid-area: Desk15;
 }
 
 #Desk16 {
-	grid-area: Desk16;
-	margin-bottom: 1px;
+  grid-area: Desk16;
 }
 
 #Desk17 {
-	grid-area: Desk17;
-	margin-bottom: 1px;
+  grid-area: Desk17;
 }
 
 #Desk18 {
-	grid-area: Desk18;
-	margin-bottom: 1px;
+  grid-area: Desk18;
 }
 
 #Desk19 {
-	grid-area: Desk19;
+  grid-area: Desk19;
 }
 
 #Desk20 {
-	grid-area: Desk20;
+  grid-area: Desk20;
 }
 
 #Desk21 {
-	grid-area: Desk21;
+  grid-area: Desk21;
 }
 
 #Desk22 {
-	grid-area: Desk22;
+  grid-area: Desk22;
 }
 
 #Desk23 {
-	grid-area: Desk23;
+  grid-area: Desk23;
 }
 
 #Desk24 {
-	grid-area: Desk24;
+  grid-area: Desk24;
 }
 
 #Desk25 {
-	grid-area: Desk25;
+  grid-area: Desk25;
 }
 
 #Desk26 {
-	grid-area: Desk26;
+  grid-area: Desk26;
 }
 
 #Desk27 {
-	grid-area: Desk27;
-  border-right: 1px dashed black;
-  margin-right: -1px;
+  grid-area: Desk27;
 }
 
-div.Desk {
-	position: relative;
+#Desk28 {
+  grid-area: Desk28;
+}
+
+div[id^='Desk']{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 span.CompName {
-	position: absolute;
-	bottom: 2%;
-	left: 2%;
-	font-size: 0.5em;
+  float: left;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-size: 0.5em;
 }
 
 span.BotName {
-	position: absolute;
-	bottom: 2%;
-	right: 4%;
-	font-size: 0.55em;
-	font-weight: bold;
+  float: right;
+  margin-bottom: 2%;
+  margin-right: 4%;
+  font-size: 0.55em;
+  font-weight: bold;
 }
 
 #Bots {
-	grid-area: Bots;
+  grid-area: Bots;
   margin-left: -1px;
 }
 
 #Overflow1 {
-	grid-area: Overflow1;
+  grid-area: Overflow1;
 }
 
 #Overflow2 {
-	grid-area: Overflow2;
+  grid-area: Overflow2;
   margin-left: -1px;
 }
 
 #Right {
-	grid-area: Right;
+  grid-area: Right;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .Unused {
@@ -210,6 +205,27 @@ span.BotName {
   margin-left: -1px;
 }
 
-ul {
-  list-style-type: none;
+div.fullscreen {
+  z-index: 9999;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
