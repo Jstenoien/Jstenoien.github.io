@@ -7,7 +7,8 @@ body {
 	height: 100vh;
 }
 
-div#Container {
+#Container {
+	margin: auto;
 	padding: 0;
 	display: grid;
 	background-color: black;
