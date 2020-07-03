@@ -1,8 +1,10 @@
-<HTML>
+<html>
+<head>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<base href="https://jstenoien.github.io/BotTracker/" target="_blank">
 		<title>HD RPA Bot Tracker</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -16,52 +18,119 @@
 		<link rel="stylesheet" type="text/css" href="./css/Stylesheet.css">
 		<meta name="description" content="Bot Tracker Sheet for Tempe">
 	</head>
-	<body>
+<body>
   <div id="Container">
     <div id="MiddleGutter"></div>
-		<div id="Left" class="LeftColumn" style="background-color:#BDD7EE;"></div>
-		<div id="Desk0" class="Desk Unused" style="background-color:#F3AFE6;"><span class="CompName">CPOW7AZTRAINA</span><span class="BotName">XXX</span></div>
-		<div id="Desk1" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">CPOW7AZTRAINA01</span><span class="BotName">XXX</span></div>
-		<div id="Desk2" class="Desk" style="background-color:#FF9B9B;"><span class="CompName">CPOW7AZTRAINA02</span><span class="BotName">XXX</span></div>
-		<div id="Desk3" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">CPOW7AZTRAINA03</span><span class="BotName">XXX</span></div>
-		<div id="Desk4" class="Desk" style="background-color:#FF9B9B;"><span class="CompName">CPOW7AZTRAINA04</span><span class="BotName">XXX</span></div>
-		<div id="Desk5" class="Desk" style="background-color:#F8CBAD;"><span class="CompName">CPOW7AZTRAINA05</span><span class="BotName">XXX</span></div>
-		<div id="Desk6" class="Desk" style="background-color:#F3AFE6;"><span class="CompName">CPOW7AZTRAINA06</span><span class="BotName">XXX</span></div>
-		<div id="Desk7" class="Desk" style="background-color:#F8CBAD;"><span class="CompName">CPOW7AZTRAINA07</span><span class="BotName">XXX</span></div>
-		<div id="Desk8" class="Desk" style="background-color:#F3AFE6;"><span class="CompName">CPOW7AZTRAINA08</span><span class="BotName">XXX</span></div>
-		<div id="Desk9" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">CPOW7AZTRAINA09</span><span class="BotName">XXX</span></div>
-		<div id="Desk10" class="Desk" style="background-color:#FF9B9B;"><span class="CompName">CPOW7AZTRAINA10</span><span class="BotName">XXX</span></div>
-		<div id="Desk11" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">CPOW7AZTRAINA11</span><span class="BotName">XXX</span></div>
-		<div id="Desk12" class="Desk" style="background-color:#FF9B9B;"><span class="CompName">CPOW7AZTRAINA12</span><span class="BotName">XXX</span></div>
-		<div id="Desk13" class="Desk" style="background-color:#F8CBAD;"><span class="CompName">CPOW7AZTRAINA13</span><span class="BotName">XXX</span></div>
-		<div id="Desk14" class="Desk" style="background-color:#F3AFE6;"><span class="CompName">CPOW7AZTRAINA14</span><span class="BotName">XXX</span></div>
-		<div id="Desk15" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">ARXW7AZTRAIND01</span><span class="BotName">XXX</span></div>
-		<div id="Desk16" class="Desk" style="background-color:#F3AFE6;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk17" class="Desk" style="background-color:#BDD7EE;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk18" class="Desk" style="background-color:#FF9B9B;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk19" class="Desk" style="background-color:#C6E0B4;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk20" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk21" class="Desk" style="background-color:#FF9B9B;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk22" class="Desk" style="background-color:#F3AFE6;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk23" class="Desk" style="background-color:#C6E0B4;"><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
-		<div id="Desk24" class="Desk" style="background-color:#BDD7EE;"><span class="CompName">ARXW7AZTRAIND10</span><span class="BotName">XXX</span></div>
-		<div id="Desk25" class="Desk" style="background-color:#F7FF8F;"><span class="CompName">ARXW7AZTRAIND11</span><span class="BotName">XXX</span></div>
-		<div id="Desk26" class="Desk" style="background-color:#F3AFE6;"><span class="CompName">ARXW7AZTRAIND12</span><span class="BotName">XXX</span></div>
-		<div id="Desk27" class="Desk Unused" style="background-color:#F8CBAD;"><span class="CompName">CPOWXPXCONRMB</span><span class="BotName">XXX</span></div>
-		<div id="Bots" class="BotInfo" style="background-color:#F8CBAD;">
-			<ul>
-				<li>AER - ABC123</li>
-				<li>AFR - ABC123</li>
-				<li>AGR - ABC123</li>
-				<li>AHR - ABC123</li>
-				<li>AIR - ABC123</li>
-				<li>AJR - ABC123</li>
-			</ul>
-		</div>
-		<div id="Overflow1" class="OverflowList" style="background-color:#FFE699;"></div>
-		<div id="Overflow2" class="OverflowList" style="background-color:#FF9B9B;"></div>
+    <div id="Left" class="LeftColumn" style="background-color:#BDD7EE;"></div>
+    <div id="Desk1" class="Unused Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">CPOW7AZTRAINA</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk2" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">CPOW7AZTRAINA01</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk3" class="Desk" style="background-color:#FF9B9B;">
+      <div><span class="CompName">CPOW7AZTRAINA02</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk4" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">CPOW7AZTRAINA03</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk5" class="Desk" style="background-color:#FF9B9B;">
+      <div><span class="CompName">CPOW7AZTRAINA04</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk6" class="Desk" style="background-color:#F8CBAD;">
+      <div><span class="CompName">CPOW7AZTRAINA05</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk7" class="Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">CPOW7AZTRAINA06</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk8" class="Desk" style="background-color:#F8CBAD;">
+      <div><span class="CompName">CPOW7AZTRAINA07</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk9" class="Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">CPOW7AZTRAINA08</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk10" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">CPOW7AZTRAINA09</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk11" class="Desk" style="background-color:#FF9B9B;">
+      <div><span class="CompName">CPOW7AZTRAINA10</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk12" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">CPOW7AZTRAINA11</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk13" class="Desk" style="background-color:#FF9B9B;">
+      <div><span class="CompName">CPOW7AZTRAINA12</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk14" class="Desk" style="background-color:#F8CBAD;">
+      <div><span class="CompName">CPOW7AZTRAINA13</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk15" class="Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">CPOW7AZTRAINA14</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk16" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">ARXW7AZTRAIND01</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk17" class="Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk18" class="Desk" style="background-color:#BDD7EE;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk19" class="Desk" style="background-color:#FF9B9B;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk20" class="Desk" style="background-color:#C6E0B4;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk21" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk22" class="Desk" style="background-color:#FF9B9B;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk23" class="Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk24" class="Desk" style="background-color:#C6E0B4;">
+      <div><span class="CompName">ARXW7AZTRAIND0</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk25" class="Desk" style="background-color:#BDD7EE;">
+      <div><span class="CompName">ARXW7AZTRAIND10</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk26" class="Desk" style="background-color:#F7FF8F;">
+      <div><span class="CompName">ARXW7AZTRAIND11</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk27" class="Desk" style="background-color:#F3AFE6;">
+      <div><span class="CompName">ARXW7AZTRAIND12</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Desk28" class="Desk" style="background-color:#F8CBAD;">
+      <div><span class="CompName">CPOWXPXCONRMB</span><span class="BotName">XXX</span></div>
+    </div>
+    <div id="Bots" class="BotInfo" style="background-color:#F8CBAD;">
+      <ul>
+        <li>AER - ABC123</li>
+        <li>AFR - ABC123</li>
+        <li>AGR - ABC123</li>
+        <li>AHR - ABC123</li>
+        <li>AIR - ABC123</li>
+        <li>AJR - ABC123</li>
+      </ul>
+    </div>
+    <div id="Overflow1" class="OverflowList" style="background-color:#FFE699;"></div>
+    <div id="Overflow2" class="OverflowList" style="background-color:#FF9B9B;"></div>
     <div id="NoteSpace"></div>
-		<div id="Right" class="RightColumn" style="background-color:#C6E0B4;"></div>
-   </div>
+    <div id="Right" class="RightColumn" style="background-color:#C6E0B4;"></div>
+    </div>
+    <div id="overlay"></div>
+<script>
+$('[id^=Desk]').click(function(e) {
+    $('#Desk' + this.id.match(/\d+$/)[0]).addClass('fullscreen');
+    $('#overlay').css("display","block");
+});
+$('#overlay').click(function () {
+    $('[id^=Desk]').removeClass('fullscreen');
+    $('#overlay').css("display","none");
+});
+</script>
 </body>
-</HTML>
+</html>
