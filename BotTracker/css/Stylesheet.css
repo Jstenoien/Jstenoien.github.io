@@ -3,7 +3,7 @@ html {
 	font-family: "Verdana";
 }
 
-#Container {
+div#Container {
 	padding: 0;
 	display: grid;
 	background-color: black;
