@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager</li>
 
 <li>$:/core</li>
@@ -383,6 +385,8 @@ Error message and password prompt
 
 <li>$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/temp/search</li>
+
 <li>$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
@@ -403,6 +407,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20200730061628544" modified="20200730061628544" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import">
+<pre>show</pre>
+</div>
 <div created="20200730054900305" modified="20200730054900305" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager">
 <pre>show</pre>
 </div>
@@ -9794,10 +9801,599 @@ Error message and password prompt
 <div created="20200730054146691" modified="20200730054147680" title="$:/GitHub/Username">
 <pre>jstenoien</pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[$:/plugins/telmiger/details]]</pre>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/.tb/macros/calc&quot;: {
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/.tb/macros/calc.js\ntype: application/javascript\nmodule-type: macro\n\nComputes a (Field) value +,-,*,/ a provided value.\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n/*\nInformation about this macro\n*/\n\nexports.name = \&quot;calc\&quot;;\n\nexports.params = [\n\t{name: \&quot;value\&quot;},\n\t{name: \&quot;operation\&quot;},\n\t{name: \&quot;until\&quot;},\n\t{name: \&quot;beyond\&quot;},\n\t{name: \&quot;decimals\&quot;},\n\t{name: \&quot;tiddler\&quot;}\n];\n\n/*\nRun the macro\n*/\nexports.run = function(value, operation, until, beyond, decimals, tiddler) {\n\tif(!value) {\n\t\treturn;\n\t}\n\tif(\&quot;\&quot; == operation){\n\t\toperation = \&quot;0\&quot;;\n\t}\n\n\tvar \n\t\tcurr,dec,op,r,result,val,\n\t\tops = [\&quot;+\&quot;,\&quot;-\&quot;,\&quot;*\&quot;,\&quot;/\&quot;];\n\n\tcurr = parseFloat(\n\t\t0 &gt; value.indexOf('!!') ?\n\t\tvalue :\n\t\tthis.wiki.getTextReference(value, \&quot;NaN\&quot;, tiddler || this.getVariable(\&quot;currentTiddler\&quot;))\n\t);\n\n\tuntil = parseFloat(until);\n\tdecimals = parseInt(decimals);\n\n\top = operation.charAt(0);\n\tval = parseFloat(0 &gt; ops.indexOf(op) ? operation : operation.substr(1));\n\top = 0 &gt; ops.indexOf(op) ? \&quot;+\&quot; : op;\n\n\tif(isNaN(curr)) {\n\t\tresult = \&quot;NaN\&quot;;\n\t} else {\n\t\tswitch (op){\n\t\t\tcase \&quot;-\&quot;: result = curr - val; break;\n\t\t\tcase \&quot;*\&quot;: result = curr * val; break;\n\t\t\tcase \&quot;/\&quot;: result = curr / val; break;\n\t\t\tcase \&quot;+\&quot;:\n\t\t\tdefault: result = curr + val;\t\t\n\t\t}\n\t\tif(!isNaN(until)) {\n\t\t\tif (!(\n\t\t\t\t\&quot;+\&quot; == op || \&quot;*\&quot; == op ?\n\t\t\t\tresult &lt;= until :\n\t\t\t\tresult &gt;= until\n\t\t\t)) {\n\t\t\t\tif(\&quot;true\&quot; == beyond) {\n\t\t\t\t\tresult = true;\n\t\t\t\t} else {\n\t\t\t\t\tresult = until;\n\t\t\t\t}\n\t\t\t}\n\t\t\tif(beyond &amp;&amp; result !== true) {\n\t\t\t\tresult = false;\n\t\t\t}\n\t\t}\n\t}\n\n\tif(!isNaN(result)){\n\t\tr = result.toString();\n\t\tdec = r.indexOf('.');\n\t\tif(dec &gt; -1){\n\t\t\tdec = r.substr(dec).length;\n\t\t\tif(\n\t\t\t\t!isNaN(decimals) &amp;&amp; dec &gt; decimals ||\n\t\t\t\tisNaN(decimals) &amp;&amp; dec &gt; 2\n\t\t\t){\n\t\t\t\tresult = result.toFixed(isNaN(decimals) ? 2 : decimals);\n\t\t\t}\t\t\t\n\t\t}\n\t}\n\treturn result;\n};\n\n})();\n&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;title&quot;: &quot;$:/.tb/macros/calc&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;summary&quot;: &quot;allows simple calculations based on tiddler fields&quot;,
+            &quot;module-type&quot;: &quot;macro&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130022129211&quot;,
+            &quot;creator&quot;: &quot;Tobias Beer&quot;,
+            &quot;created&quot;: &quot;20150126131341956&quot;
+        },
+        &quot;$:/core/ui/TopBar/menu&quot;: {
+            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-iconmenutopbar\&quot;&gt;\n&lt;$reveal type=match state='$:/core/ui/TopBar/menu!!show_left' text=show&gt;\n&lt;div class='tc-topleftmenu'&gt;\n&lt;$list filter='[tag[$:/tags/TopLeftMenu]nsort[top_left_menu_order]]'&gt;&lt;$transclude/&gt;&lt;/$list&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=match state='$:/core/ui/TopBar/menu!!show_middle' text=show&gt;\n&lt;div class='tc-topcentermenu'&gt;\n&lt;$list filter='[tag[$:/tags/TopMiddleMenu]nsort[top_middle_menu_order]]'&gt;&lt;$transclude/&gt;&lt;/$list&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=match state='$:/core/ui/TopBar/menu!!show_right' text=show&gt;\n&lt;div class='tc-toprightmenu'&gt;\n&lt;$list filter='[tag[$:/tags/TopRightMenu]nsort[top_right_menu_order]]'&gt;&lt;$transclude/&gt;&lt;/$list&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;/div&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/core/ui/TopBar/menu&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;show_right&quot;: &quot;hide&quot;,
+            &quot;show_middle&quot;: &quot;hide&quot;,
+            &quot;show_left&quot;: &quot;hide&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060815063&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150123102312282&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Icon Menu Settings&quot;: {
+            &quot;text&quot;: &quot;\\define thisMakeTiddlerReference()\n\&quot;\&quot;\&quot;{{$(TiddlerName)$}}\&quot;\&quot;\&quot;\n\\end\n\n\\define thisMakeOption()\n&lt;option value=&lt;&lt;thisMakeTiddlerReference &lt;&lt;TiddlerName&gt;&gt;&gt;&gt;&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/option&gt;\n\\end\n\n\\define thisTopBarStyleSelector()\n&lt;$select tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_style'&gt;\n&lt;$list filter='[tag[Top Bar Style]]'&gt;\n&lt;$set name=TiddlerName value=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;option value=&lt;&lt;thisMakeTiddlerReference&gt;&gt;&gt;&lt;$view field=caption/&gt;&lt;/option&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$select&gt;\n\\end\n\n\\define thisTopLeftMenuStyleSelector()\n&lt;$select tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_left_menu_style'&gt;\n&lt;$list filter='[tag[Top Left Menu Style]]'&gt;\n&lt;$set name=TiddlerName value=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;option value=&lt;&lt;thisMakeTiddlerReference&gt;&gt;&gt;&lt;$view field=caption/&gt;&lt;/option&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$select&gt;\n\\end\n\n\\define thisTopRightMenuStyleSelector()\n&lt;$select tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_right_menu_style'&gt;\n&lt;$list filter='[tag[Top Right Menu Style]]'&gt;\n&lt;$set name=TiddlerName value=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;option value=&lt;&lt;thisMakeTiddlerReference&gt;&gt;&gt;&lt;$view field=caption/&gt;&lt;/option&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$select&gt;\n\\end\n\n\\define thisTopMiddleMenuStyleSelector()\n&lt;$select tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_middle_menu_style'&gt;\n&lt;$list filter='[tag[Top Middle Menu Style]]'&gt;\n&lt;$set name=TiddlerName value=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;option value=&lt;&lt;thisMakeTiddlerReference&gt;&gt;&gt;&lt;$view field=caption/&gt;&lt;/option&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$select&gt;\n\\end\n\n\\define thisLeftMenuStyleSelector()\n&lt;$select tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_style'&gt;\n&lt;$list filter='[tag[Left Menu Style]]'&gt;\n&lt;$set name=TiddlerName value=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;option value=&lt;&lt;thisMakeTiddlerReference&gt;&gt;&gt;&lt;$view field=caption/&gt;&lt;/option&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$select&gt;\n\\end\n\n\\define thisRightMenuStyleSelector()\n&lt;$select tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_style'&gt;\n&lt;$list filter='[tag[Right Menu Style]]'&gt;\n&lt;$set name=TiddlerName value=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;option value=&lt;&lt;thisMakeTiddlerReference&gt;&gt;&gt;&lt;$view field=caption/&gt;&lt;/option&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$select&gt;\n\\end\n\n&lt;$button&gt;Set tiddler top position&lt;$action-setfield $tiddler='' $field=text $value={{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}}/&gt;&lt;/$button&gt; - This sets the position of the top of the story river to the bottom of the top bar. It isn't perfect, but it mostly works.\n\nToggle menus and set css styles, further custimization is available in the tabs below. \n\n|&lt;$checkbox tiddler='$:/core/ui/TopBar/menu' tag='$:/tags/TopRightBar'&gt;Show Top Bar&lt;/$checkbox&gt;|&lt;&lt;thisTopBarStyleSelector&gt;&gt;|\n|&lt;$checkbox tiddler='$:/inmysocks/iconmenus/leftmenu-icons' tag='$:/tags/PageTemplate'&gt;Show Left Menu&lt;/$checkbox&gt;|&lt;&lt;thisLeftMenuStyleSelector&gt;&gt;|\n|&lt;$checkbox tiddler='$:/inmysocks/iconmenus/rightmenu-icons' tag='$:/tags/PageTemplate'&gt;Show Right Menu&lt;/$checkbox&gt;|&lt;&lt;thisRightMenuStyleSelector&gt;&gt;|\n|&lt;$checkbox tiddler='$:/core/ui/TopBar/menu' field='show_middle' checked='show' unchecked='hide'&gt; Show Top Middle Menu&lt;/$checkbox&gt;|&lt;&lt;thisTopMiddleMenuStyleSelector&gt;&gt;|\n|&lt;$checkbox tiddler='$:/core/ui/TopBar/menu' field='show_left' checked='show' unchecked='hide'&gt; Show Top Left Menu&lt;/$checkbox&gt;|&lt;&lt;thisTopLeftMenuStyleSelector&gt;&gt;|\n|&lt;$checkbox tiddler='$:/core/ui/TopBar/menu' field='show_right' checked='show' unchecked='hide'&gt; Show Top Right Menu&lt;/$checkbox&gt;|&lt;&lt;thisTopRightMenuStyleSelector&gt;&gt;|\n\n\nTiddlers labeled `&lt;menu name&gt; Style` appear as options here. (So `Top Bar Style`, `Right Menu Style`, etc.)\n\nMenus on the top bar will inherit attributes from the top bar settings if an attribute is set to `inherit` or left blank.\n\n&lt;&lt;tabs \&quot;[[$:/inmysocks/iconmenus/Top Bar Settings]] [[$:/inmysocks/iconmenus/Left Menu Settings]] [[$:/inmysocks/iconmenus/Right Menu Settings]] [[$:/inmysocks/iconmenus/Top Left Menu Settings]] [[$:/inmysocks/iconmenus/Top Middle Menu Settings]] [[$:/inmysocks/iconmenus/Top Right Menu Settings]] \&quot;[[$:/inmysocks/iconmenus/Top Bar Settings]]\&quot;&gt;&gt;&quot;,
+            &quot;topbar_height&quot;: &quot;2&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Icon Menu Settings&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ControlPanel [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130022936515&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150123193933540&quot;,
+            &quot;caption&quot;: &quot;Icon Menu Settings&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon_menu_settings&quot;: {
+            &quot;text&quot;: &quot;&quot;,
+            &quot;top_right_menu_vertical_offset&quot;: &quot;0px&quot;,
+            &quot;top_right_menu_text_color&quot;: &quot;#0020f0&quot;,
+            &quot;top_right_menu_style&quot;: &quot;\&quot;\&quot;\&quot;{{$:/inmysocks/iconmenus/Top Right Menu Basic Style}}\&quot;\&quot;\&quot;&quot;,
+            &quot;top_right_menu_right_offset&quot;: &quot;10px&quot;,
+            &quot;top_right_menu_left_offset&quot;: &quot;0px&quot;,
+            &quot;top_right_menu_font_size&quot;: &quot;inherit&quot;,
+            &quot;top_middle_menu_vertical_offset&quot;: &quot;0px&quot;,
+            &quot;top_middle_menu_text_color&quot;: &quot;#00a000&quot;,
+            &quot;top_middle_menu_style&quot;: &quot;\&quot;\&quot;\&quot;{{$:/inmysocks/iconmenus/Top Middle Menu Basic Style}}\&quot;\&quot;\&quot;&quot;,
+            &quot;top_middle_menu_left_offset&quot;: &quot;0px&quot;,
+            &quot;top_middle_menu_font_size&quot;: &quot;inherit&quot;,
+            &quot;top_left_menu_vertical_offset&quot;: &quot;0px&quot;,
+            &quot;top_left_menu_text_color&quot;: &quot;#000000&quot;,
+            &quot;top_left_menu_style&quot;: &quot;\&quot;\&quot;\&quot;{{$:/inmysocks/iconmenus/Top Left Menu Basic Style}}\&quot;\&quot;\&quot;&quot;,
+            &quot;top_left_menu_left_offset&quot;: &quot;0px&quot;,
+            &quot;top_left_menu_font_size&quot;: &quot;inherit&quot;,
+            &quot;top_bar_text_size&quot;: &quot;20px&quot;,
+            &quot;top_bar_style&quot;: &quot;\&quot;\&quot;\&quot;{{$:/inmysocks/iconmenus/Top Bar Basic Style}}\&quot;\&quot;\&quot;&quot;,
+            &quot;top_bar_hidden_size&quot;: &quot;-25px&quot;,
+            &quot;top_bar_height&quot;: &quot;40px&quot;,
+            &quot;top_bar_border_color&quot;: &quot;#a00000&quot;,
+            &quot;top_bar_border&quot;: &quot;solid&quot;,
+            &quot;top_bar_background_color&quot;: &quot;#191919&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon_menu_settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;right_menu_width&quot;: &quot;30px&quot;,
+            &quot;right_menu_vertical_offset&quot;: &quot;-20px&quot;,
+            &quot;right_menu_text_color&quot;: &quot;#000000&quot;,
+            &quot;right_menu_style&quot;: &quot;\&quot;\&quot;\&quot;{{$:/inmysocks/iconmenus/Right Menu Appear on Hover Style}}\&quot;\&quot;\&quot;&quot;,
+            &quot;right_menu_show_border&quot;: &quot;solid&quot;,
+            &quot;right_menu_right_offset&quot;: &quot;0px&quot;,
+            &quot;right_menu_hidden_size&quot;: &quot;99.5%&quot;,
+            &quot;right_menu_hidden_opacity&quot;: &quot;0.1&quot;,
+            &quot;right_menu_font_size&quot;: &quot;20px&quot;,
+            &quot;right_menu_border_color&quot;: &quot;&quot;,
+            &quot;right_menu_background_color&quot;: &quot;grey&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060752366&quot;,
+            &quot;left_menu_width&quot;: &quot;40px&quot;,
+            &quot;left_menu_vertical_offset&quot;: &quot;-20px&quot;,
+            &quot;left_menu_text_color&quot;: &quot;#000000&quot;,
+            &quot;left_menu_style&quot;: &quot;\&quot;\&quot;\&quot;{{$:/inmysocks/iconmenus/Left Menu Appear on Hover Style}}\&quot;\&quot;\&quot;&quot;,
+            &quot;left_menu_show_border&quot;: &quot;&quot;,
+            &quot;left_menu_left_offset&quot;: &quot;5px&quot;,
+            &quot;left_menu_hidden_size&quot;: &quot;99%&quot;,
+            &quot;left_menu_hidden_opacity&quot;: &quot;0.2&quot;,
+            &quot;left_menu_font_size&quot;: &quot;20px&quot;,
+            &quot;left_menu_border_color&quot;: &quot;#000&quot;,
+            &quot;left_menu_background_color&quot;: &quot;&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150124120530941&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Advanced Search&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/advanced-search}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;1&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Advanced Search&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]] $:/tags/TopRightMenu&quot;,
+            &quot;right_menu_order&quot;: &quot;3&quot;,
+            &quot;order&quot;: &quot;10&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060952917&quot;,
+            &quot;left_menu_order&quot;: &quot;17&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121174337179&quot;,
+            &quot;caption&quot;: &quot;Advanced Search&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Close All&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/close-all}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Close All&quot;,
+            &quot;tags&quot;: &quot;$:/tags/LeftMenu [[Menu Icon]] [[Icon Menus]] $:/tags/RightMenu&quot;,
+            &quot;right_menu_order&quot;: &quot;4&quot;,
+            &quot;order&quot;: &quot;11&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060921288&quot;,
+            &quot;left_menu_order&quot;: &quot;4&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121173410074&quot;,
+            &quot;caption&quot;: &quot;Close All&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Control Panel&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/control-panel}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;3&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Control Panel&quot;,
+            &quot;tags&quot;: &quot;$:/tags/LeftMenu [[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;2&quot;,
+            &quot;order&quot;: &quot;3&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060858028&quot;,
+            &quot;left_menu_order&quot;: &quot;2&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121164820855&quot;,
+            &quot;caption&quot;: &quot;Control Panel&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Create New Tiddler From Template&quot;: {
+            &quot;text&quot;: &quot;&lt;$button popup='$:/state/createnewtiddler' class='tc-btn-invisible' tooltip='New Tiddler from Template'&gt;{{$:/core/images/new-button}}&lt;/$button&gt;&lt;$reveal type='popup' state='$:/state/createnewtiddler'&gt;&lt;div class=\&quot;tc-drop-down\&quot;&gt;\nCreate New Tiddler Using Template:\n&lt;$list filter='[prefix[New Tiddler Template - ]]' variable=TemplateName&gt;&lt;$button&gt;&lt;$view tiddler=&lt;&lt;TemplateName&gt;&gt; field=title/&gt;&lt;$action-sendmessage $message='tm-new-tiddler' $param=&lt;&lt;TemplateName&gt;&gt;/&gt;&lt;/$button&gt;\n&lt;/$list&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Create New Tiddler From Template&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] $:/tags/LeftMenu [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;5&quot;,
+            &quot;order&quot;: &quot;3&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014343628&quot;,
+            &quot;left_menu_order&quot;: &quot;3&quot;,
+            &quot;image&quot;: &quot;{{$:/core/images/new-button}}&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121161849750&quot;,
+            &quot;caption&quot;: &quot;Create New Tiddler From Template&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Full Screen&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/full-screen}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Full Screen&quot;,
+            &quot;tags&quot;: &quot;$:/tags/LeftMenu [[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;6&quot;,
+            &quot;order&quot;: &quot;12&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014344060&quot;,
+            &quot;left_menu_order&quot;: &quot;5&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121174043988&quot;,
+            &quot;caption&quot;: &quot;Full Screen&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Home&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/home}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;18&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;1&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Home&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] $:/tags/RightMenu $:/tags/TopMiddleMenu $:/tags/LeftMenu [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;1&quot;,
+            &quot;order&quot;: &quot;NaN&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014228756&quot;,
+            &quot;left_menu_order&quot;: &quot;0&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121170719185&quot;,
+            &quot;caption&quot;: &quot;Home&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Import&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/import}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Import&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;7&quot;,
+            &quot;order&quot;: &quot;4&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130020950336&quot;,
+            &quot;left_menu_order&quot;: &quot;16&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121173313491&quot;,
+            &quot;caption&quot;: &quot;Import&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Language&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/language}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Language&quot;,
+            &quot;tags&quot;: &quot;$:/tags/LeftMenu [[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;8&quot;,
+            &quot;order&quot;: &quot;13&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014345532&quot;,
+            &quot;left_menu_order&quot;: &quot;6&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121174250819&quot;,
+            &quot;caption&quot;: &quot;Language&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/New Journal&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/new-journal}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/New Journal&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;9&quot;,
+            &quot;order&quot;: &quot;14&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014345172&quot;,
+            &quot;left_menu_order&quot;: &quot;15&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121173516193&quot;,
+            &quot;caption&quot;: &quot;New Journal&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Permaview&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/permaview}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Permaview&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;11&quot;,
+            &quot;order&quot;: &quot;5&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014346580&quot;,
+            &quot;left_menu_order&quot;: &quot;14&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121173435603&quot;,
+            &quot;caption&quot;: &quot;Permaview&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Refresh&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/refresh}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;1&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Refresh&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] $:/tags/TopLeftMenu [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;12&quot;,
+            &quot;order&quot;: &quot;6&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014347180&quot;,
+            &quot;left_menu_order&quot;: &quot;1&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121173606555&quot;,
+            &quot;caption&quot;: &quot;Refresh&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Save Wiki&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/save-wiki}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;4&quot;,
+            &quot;top_left_menu_order&quot;: &quot;3&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Save Wiki&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] $:/tags/TopLeftMenu $:/tags/TopMiddleMenu [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;13&quot;,
+            &quot;order&quot;: &quot;7&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014347620&quot;,
+            &quot;left_menu_order&quot;: &quot;12&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121175630282&quot;,
+            &quot;caption&quot;: &quot;Save Wiki&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Search&quot;: {
+            &quot;text&quot;: &quot;&lt;$button to='$:/AdvancedSearch' class='tc-btn-invisible'&gt;{{$:/core/ui/Buttons/advanced-search}}&lt;/$button&gt;\n&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Search&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]] $:/tags/RightMenu&quot;,
+            &quot;right_menu_order&quot;: &quot;14&quot;,
+            &quot;order&quot;: &quot;11&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060933025&quot;,
+            &quot;left_menu_order&quot;: &quot;13&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121171609124&quot;,
+            &quot;caption&quot;: &quot;Search&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Storyview&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/storyview}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Storyview&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;18&quot;,
+            &quot;order&quot;: &quot;15&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014348652&quot;,
+            &quot;left_menu_order&quot;: &quot;10&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121174204933&quot;,
+            &quot;caption&quot;: &quot;Storyview&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Tag Manager&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/tag-manager}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Tag Manager&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;17&quot;,
+            &quot;order&quot;: &quot;16&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014349285&quot;,
+            &quot;left_menu_order&quot;: &quot;9&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121174313928&quot;,
+            &quot;caption&quot;: &quot;Tag Manager&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Theme&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/Buttons/theme}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;0&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;0&quot;,
+            &quot;top_left_menu_order&quot;: &quot;0&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Theme&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] [[Icon Menus]]&quot;,
+            &quot;right_menu_order&quot;: &quot;16&quot;,
+            &quot;order&quot;: &quot;17&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130014349716&quot;,
+            &quot;left_menu_order&quot;: &quot;8&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121174228645&quot;,
+            &quot;caption&quot;: &quot;Theme&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/icon/Wiki Title and Subtitle&quot;: {
+            &quot;text&quot;: &quot;{{$:/SiteTitle}} -- {{$:/SiteSubtitle}}&quot;,
+            &quot;top_right_menu_order&quot;: &quot;2&quot;,
+            &quot;top_middle_menu_order&quot;: &quot;2&quot;,
+            &quot;top_left_menu_order&quot;: &quot;2&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/icon/Wiki Title and Subtitle&quot;,
+            &quot;tags&quot;: &quot;[[Menu Icon]] $:/tags/TopMiddleMenu [[Icon Menus]] $:/tags/TopRightMenu&quot;,
+            &quot;right_menu_order&quot;: &quot;15&quot;,
+            &quot;order&quot;: &quot;2&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130015910423&quot;,
+            &quot;left_menu_order&quot;: &quot;11&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150124161741302&quot;,
+            &quot;caption&quot;: &quot;Wiki Title and Subtitle&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Left Menu Appear on Hover Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-leftmenu {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_left_offset}};\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_width}};\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_font_size}};\n}\n\n\nhtml .tc-leftmenu-wrapper {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: 0px;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_vertical_offset}};\n     width: 30px;\n     height: 100%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_font_size}};\n     background-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_background_color}};\n     opacity:  {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_hidden_opacity}};\n     border-right: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_show_border}};\n}\n\nhtml .tc-leftmenu-wrapper:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: 0px;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_vertical_offset}};\n     width: 30px;\n     height 100%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_font_size}};\n     background-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_background_color}};\n     opacity: 1;\n     border-right: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_show_border}};\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Left Menu Appear on Hover Style&quot;,
+            &quot;tags&quot;: &quot;[[Left Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130020638967&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125145441628&quot;,
+            &quot;caption&quot;: &quot;Left Menu Appear on Hover Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Left Menu Basic Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-leftmenu {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_left_offset}};\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_width}};\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_font_size}};\n}\n&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Left Menu Basic Style&quot;,
+            &quot;tags&quot;: &quot;[[Left Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130020716961&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125143220099&quot;,
+            &quot;caption&quot;: &quot;Left Menu Basic Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Left Menu Pop Out on Hover Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-leftmenu {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: inherit;\n     top: inherit;\n     width: inherit;\n     z-index: 99;\n     color:inherit;\n     font-size:inherit;\n     opacity: 1;\n     height: inherit;\n}\n\nhtml .tc-leftmenu:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: inherit;\n     top: inherit;\n     width: inherit;\n     z-index: 99;\n     color:inherit;\n     font-size:inherit;\n     opacity: 1;\n     height: inherit;\n     text-align: center;\n}\n\nhtml .tc-leftmenu-wrapper {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_hidden_size}};\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_width}};\n     height: 110%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_font_size}};\n     background-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_background_color}};\n     opacity: 1; \n     overflow: hidden;\n     border-right: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_show_border}};\n     border-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_border_color}};\n}\n\nhtml .tc-leftmenu-wrapper:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: 0px;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_width}};\n     height 110%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_font_size}};\n     background-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_background_color}};\n     opacity: 1;\n     overflow: hidden;\n     border-right: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_show_border}};\n     border-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_border_color}};\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Left Menu Pop Out on Hover Style&quot;,
+            &quot;tags&quot;: &quot;[[Left Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021011400&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125215119078&quot;,
+            &quot;caption&quot;: &quot;Left Menu Pop Out on Hover Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Left Menu Settings&quot;: {
+            &quot;text&quot;: &quot;Left Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_left_offset'/&gt; (Distance from the left side of the screen)&lt;br&gt;\nVertical Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_vertical_offset'/&gt; (Distance from the bottom of the top bar or top of the screen)&lt;br&gt;\nWidth: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_width'/&gt; (Menu width)&lt;br&gt;\nFont Size: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_font_size'/&gt;&lt;br&gt;\nText Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_text_color'/&gt;&lt;br&gt;\nBackground Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_background_color'/&gt;&lt;br&gt;\nShow Border: &lt;$checkbox tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field=left_menu_show_border checked=solid unchecked=''/&gt;&lt;br&gt;\nBorder Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field=left_menu_border_color/&gt;&lt;br&gt;\nOpacity When Hidden: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_hidden_opacity'/&gt; (used for the 'appear on hover' style)&lt;br&gt;\nPosition of Hidden Menu: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='left_menu_hidden_size'/&gt; (used for the 'pop out on hover' style)&lt;br&gt;\n\nThe checkbox sets if the item is in the menu, the numbers in the `Order` column set the order in which the entries appear.\n\n&lt;table&gt;\n&lt;tr&gt;\n &lt;th&gt;In Menu?&lt;/th&gt;\n &lt;th&gt;Name&lt;/th&gt;\n &lt;th&gt;Order&lt;/th&gt;\n&lt;/tr&gt;\n&lt;$list filter='[tag[Menu Icon]nsort[left_menu_order]]'&gt;\n&lt;tr&gt;\n &lt;td&gt;&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag='$:/tags/LeftMenu'&gt;&lt;/$checkbox&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=caption&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$button set=\&quot;!!left_menu_order\&quot; setTo=&lt;&lt;calc !!left_menu_order 1&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-down}}&lt;/$button&gt; \n&lt;$button set=\&quot;!!left_menu_order\&quot; setTo=&lt;&lt;calc !!left_menu_order -1 0&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-up}}&lt;/$button&gt;&lt;$edit-text field='left_menu_order' placeholder='Order' size=4/&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/table&gt;&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Left Menu Settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130022822724&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121172547555&quot;,
+            &quot;caption&quot;: &quot;Left Menu Settings&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/leftmenu-icons&quot;: {
+            &quot;text&quot;: &quot;&lt;div class='tc-leftmenu-wrapper'&gt;\n&lt;div class=\&quot;tc-leftmenu tc-page-controls\&quot;&gt;\n\n@@.tc-site-title\n\n@@\n\n&lt;$list filter='[tag[$:/tags/LeftMenu]nsort[left_menu_order]]'&gt;\n\n&lt;$transclude/&gt;\n\n&lt;/$list&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;&quot;,
+            &quot;type&quot;: &quot;application/x-tiddler&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/leftmenu-icons&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060818068&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20140610090914688&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Right Menu Appear on Hover Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-rightmenu {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: inherit;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: inherit;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     opacity: 1;\n     background-color: inherit;\n     height: 100%;\n     border: none;\n     border-color: #000000;\n}\n\nhtml .tc-rightmenu:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: inherit;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: inherit;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     opacity: 1;\n     background-color: inherit;\n     height: 100%;\n     border: none;\n     border-color: #000000;\n}\n\nhtml .tc-rightmenu-wrapper {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: 0px;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: 30px;\n     height: 100%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     background-color: transparent;\n     opacity: {{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_hidden_opacity}};\n     overflow: hidden;\n}\n\nhtml .tc-rightmenu-wrapper:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: 0px;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: 30px;\n     height 100%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     background-color: transparent;\n     opacity: 1;\n     overflow: hidden;\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Right Menu Appear on Hover Style&quot;,
+            &quot;tags&quot;: &quot;[[Right Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021100664&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125144411278&quot;,
+            &quot;caption&quot;: &quot;Right Menu Appear on Hover Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Right Menu Basic Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-rightmenu {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_right_offset}};\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_width}};\n     z-index: 98;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     opacity: 1;\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Right Menu Basic Style&quot;,
+            &quot;tags&quot;: &quot;[[Right Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021132968&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125143649507&quot;,
+            &quot;caption&quot;: &quot;Right Menu Basic Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Right Menu Pop Out on Hover Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-rightmenu {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: inherit;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: inherit;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     opacity: 1;\n     height: inherit;\n     text-align: center;\n     background-color: inherit;\n}\n\nhtml .tc-rightmenu:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: inherit;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: inherit;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     opacity: 1;\n     height: inherit;\n     border-left: inherit;\n     text-align: center;\n     background-color: inherit;\n}\n\nhtml .tc-rightmenu-wrapper {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     left: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_hidden_size}};\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_width}};\n     height: 110%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     background-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_background_color}};\n     opacity: 1; \n     overflow: hidden;\n     border-left: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_show_border}};\n     border-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_border_color}};\n}\n\nhtml .tc-rightmenu-wrapper:hover {\n     display: block;\n     padding: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}} 0px 0px 0px;\n     position: fixed;\n     right: 0px;\n     top: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_vertical_offset}};\n     width: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_width}};\n     height 110%;\n     z-index: 99;\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_text_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_font_size}};\n     background-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_background_color}};\n     opacity: 1;\n     overflow: hidden;\n     border-left: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_show_border}};\n     border-color: {{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_border_color}};\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Right Menu Pop Out on Hover Style&quot;,
+            &quot;tags&quot;: &quot;[[Right Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021248211&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125213040915&quot;,
+            &quot;caption&quot;: &quot;Right Menu Pop Out on Hover Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Right Menu Settings&quot;: {
+            &quot;text&quot;: &quot;Right Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_right_offset'/&gt; (Distance from the right side of the screen)&lt;br&gt;\nVertical Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_vertical_offset'/&gt; (Distance from the bottom of the top bar or top of the screen)&lt;br&gt;\nWidth: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_width'/&gt; (Menu width)&lt;br&gt;\nFont Size: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_font_size'/&gt;&lt;br&gt;\nText Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_text_color'/&gt; &lt;br&gt;\nBackground Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_background_color'/&gt;&lt;br&gt;\nShow Border: &lt;$checkbox tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field=right_menu_show_border checked=solid unchecked=''/&gt;&lt;br&gt;\nBorder Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field=right_menu_border_color/&gt;&lt;br&gt;\nOpacity When Hidden: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_hidden_opacity'/&gt; (used for the 'appear on hover' style)&lt;br&gt;\nPosition of Hidden Menu: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='right_menu_hidden_size'/&gt; (used for the 'pop out on hover' style)&lt;br&gt;\n\nThe checkbox sets if the item is in the menu, the numbers in the `Order` column set the order in which the entries appear.\n\n&lt;table&gt;\n&lt;tr&gt;\n &lt;th&gt;In Menu?&lt;/th&gt;\n &lt;th&gt;Name&lt;/th&gt;\n &lt;th&gt;Order&lt;/th&gt;\n&lt;/tr&gt;\n&lt;$list filter='[tag[Menu Icon]nsort[right_menu_order]]'&gt;\n&lt;tr&gt;\n &lt;td&gt;&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag='$:/tags/RightMenu'&gt;&lt;/$checkbox&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=caption&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$button set=\&quot;!!right_menu_order\&quot; setTo=&lt;&lt;calc !!right_menu_order 1&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-down}}&lt;/$button&gt; \n&lt;$button set=\&quot;!!right_menu_order\&quot; setTo=&lt;&lt;calc !!right_menu_order -1 0&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-up}}&lt;/$button&gt;&lt;$edit-text field='right_menu_order' placeholder='Order' size=4/&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/table&gt;&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Right Menu Settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021730888&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150123193835943&quot;,
+            &quot;caption&quot;: &quot;Right Menu Settings&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/rightmenu-icons&quot;: {
+            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-rightmenu-wrapper\&quot;&gt;\n&lt;div class=\&quot;tc-page-controls tc-rightmenu\&quot;&gt;\n\n@@.tc-site-title\n\n@@\n\n&lt;$list filter='[tag[$:/tags/RightMenu]nsort[right_menu_order]]'&gt;\n\n&lt;$transclude/&gt;\n\n&lt;/$list&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;&quot;,
+            &quot;type&quot;: &quot;application/x-tiddler&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/rightmenu-icons&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]] $:/tags/PageTemplate&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20200730060817122&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20150123170243215&quot;,
+            &quot;class&quot;: &quot;tc-rightmenu-wrapper&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/stylesheet/IconMenus&quot;: {
+            &quot;text&quot;: &quot;/* STORY-RIVER */\n.tc-story-river {\n     left: {{!!story-left}};\n     width: {{!!story-width}};\n}\n\n/* LEFT MENU */\n{{$:/inmysocks/iconmenus/icon_menu_settings!!left_menu_style}}\n\n/* RIGHT MENU */\n{{$:/inmysocks/iconmenus/icon_menu_settings!!right_menu_style}}\n\n/* TOP LEFT MENU */\n{{$:/inmysocks/iconmenus/icon_menu_settings!!top_left_menu_style}}\n\n/* TOP RIGHT MENU */\n{{$:/inmysocks/iconmenus/icon_menu_settings!!top_right_menu_style}}\n\n/* TOP MIDDLE MENU */\n{{$:/inmysocks/iconmenus/icon_menu_settings!!top_middle_menu_style}}\n\n/* TOP BAR */\n{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_style}}\n\n/* Menu link hover stuff */\nhtml .tc-iconmenu-hoverlink:hover {\n    color:green;\n}&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;top-leftmenu&quot;: &quot;0px&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/stylesheet/IconMenus&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet [[Icon Menus]]&quot;,
+            &quot;story-width&quot;: &quot;&quot;,
+            &quot;story-left&quot;: &quot;0px&quot;,
+            &quot;right_menu_style&quot;: &quot;{{Right Menu Basic Style}}&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130020912223&quot;,
+            &quot;leftmenu-width&quot;: &quot;0px&quot;,
+            &quot;left_menu_style&quot;: &quot;{{Left Menu Basic Style}}&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20140607071109226&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Bar Basic Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-iconmenutopbar {\n     display:block;\n     width:100%;\n     position:fixed;\n     text-align:center;\n     line-width:100%;\n     left:0%;\n     top:0px;\n     background-color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_background_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_text_size}};\n     border-bottom-style:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_border}};\n     border-bottom-color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_border_color}};\n     height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n     line-height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n     overflow: hidden;\n     z-index: 70;\n} &quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Bar Basic Style&quot;,
+            &quot;tags&quot;: &quot;[[Top Bar Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021323112&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125150421416&quot;,
+            &quot;caption&quot;: &quot;Top Bar Basic Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Bar Pop Out on Hover Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-iconmenutopbar {\n     display:block;\n     width:100%;\n     position:fixed;\n     text-align:center;\n     line-width:100%;\n     left:0%;\n     top:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_hidden_size}};\n     background-color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_background_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_text_size}};\n     border-bottom-style:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_border}};\n     border-bottom-color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_border_color}};\n     height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n     line-height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n} \n\nhtml .tc-iconmenutopbar:hover {\n     display:block;\n     width:100%;\n     position:fixed;\n     text-align:center;\n     line-width:100%;\n     left:0%;\n     top:0px;\n     background-color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_background_color}};\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_text_size}};\n     border-bottom-style:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_border}};\n     border-bottom-color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_border_color}};\n     height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n     line-height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n} &quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Bar Pop Out on Hover Style&quot;,
+            &quot;tags&quot;: &quot;[[Top Bar Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021427611&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125150523066&quot;,
+            &quot;caption&quot;: &quot;Top Bar Pop Out on Hover Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Bar Settings&quot;: {
+            &quot;text&quot;: &quot;Top Bar Height: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_height'/&gt;&lt;br&gt;\nAmount of Top Bar Hidden: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_hidden_size'/&gt; (Used for the pop out on hover style, this should be negative and Top Bar Height+Amount Hidden&gt;0)&lt;br&gt;\nTop Bar Background Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_background_color'/&gt;&lt;br&gt;\nShow Top Bar Border: &lt;$checkbox tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_border' checked=solid unchecked=none/&gt;&lt;br&gt;\nTop Bar Border Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_border_color'/&gt;&lt;br&gt;\nTop Bar Text Size: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_bar_text_size'/&gt;&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Bar Settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021504498&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150124124443910&quot;,
+            &quot;caption&quot;: &quot;Top Bar Settings&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Left Menu Basic Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-topleftmenu {\n     display: block;\n     padding: 0px 0px 0px 0px;\n     position: absolute;\n     left: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_left_menu_left_offset}};\n     top: inherit;\n     z-index: 199;\n     border-bottom-style: none;\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_left_menu_font_size}};\n     line-height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_left_menu_text_color}};\n     height: inherit;\n     overflow: inherit;\n     text-align: left;\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Left Menu Basic Style&quot;,
+            &quot;tags&quot;: &quot;[[Top Left Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021523360&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125145544310&quot;,
+            &quot;caption&quot;: &quot;Top Left Menu Basic Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Left Menu Settings&quot;: {
+            &quot;text&quot;: &quot;Vertical Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_left_menu_vertical_offset'/&gt;&lt;br&gt;\nLeft Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_left_menu_left_offset'/&gt;&lt;br&gt;\nFont Size &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_left_menu_font_size'/&gt;&lt;br&gt;\nText Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_left_menu_text_color'/&gt; \n\nThe checkbox sets if the item is in the menu, the numbers in the `Order` column set the order in which the entries appear.\n\n&lt;table&gt;\n&lt;tr&gt;\n &lt;th&gt;In Menu?&lt;/th&gt;\n &lt;th&gt;Name&lt;/th&gt;\n &lt;th&gt;Order&lt;/th&gt;\n&lt;/tr&gt;\n&lt;$list filter='[tag[Menu Icon]nsort[top_left_menu_order]]'&gt;\n&lt;tr&gt;\n &lt;td&gt;&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag='$:/tags/TopLeftMenu'&gt;&lt;/$checkbox&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=caption&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$button set=\&quot;!!top_left_menu_order\&quot; setTo=&lt;&lt;calc !!top_left_menu_order 1&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-down}}&lt;/$button&gt; \n&lt;$button set=\&quot;!!top_left_menu_order\&quot; setTo=&lt;&lt;calc !!top_left_menu_order -1 0&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-up}}&lt;/$button&gt;&lt;$edit-text field='top_left_menu_order' placeholder='Order' size=4/&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/table&gt;&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Left Menu Settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021756478&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150123211512650&quot;,
+            &quot;caption&quot;: &quot;Right Menu Settings&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Middle Menu Basic Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-topcentermenu {\n     width: 100%;\n     text-align: center;\n     display: block;\n     padding: 0px 0px 0px 0px;\n     position: absolute;\n     top: inherit;\n     z-index: 99;\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_middle_menu_font_size}};\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_middle_menu_text_color}};\n     line-height: inherit;\n     height: inherit;\n     overflow: inherit;\n}&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Middle Menu Basic Style&quot;,
+            &quot;tags&quot;: &quot;[[Top Middle Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021550168&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125150136727&quot;,
+            &quot;caption&quot;: &quot;Top Middle Menu Basic Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Middle Menu Settings&quot;: {
+            &quot;text&quot;: &quot;Vertical Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_middle_menu_vertical_offset'/&gt;&lt;br&gt;\nLeft Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_middle_menu_left_offset'/&gt;&lt;br&gt;\nFont Size: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_middle_menu_font_size'/&gt;&lt;br&gt;\nText Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_middle_menu_text_color'/&gt;&lt;br&gt;\n\nThe checkbox sets if the item is in the menu, the numbers in the `Order` column set the order in which the entries appear.\n\n&lt;table&gt;\n&lt;tr&gt;\n &lt;th&gt;In Menu?&lt;/th&gt;\n &lt;th&gt;Name&lt;/th&gt;\n &lt;th&gt;Order&lt;/th&gt;\n&lt;/tr&gt;\n&lt;$list filter='[tag[Menu Icon]nsort[top_middle_menu_order]]'&gt;\n&lt;tr&gt;\n &lt;td&gt;&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag='$:/tags/TopMiddleMenu'&gt;&lt;/$checkbox&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=caption&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$button set=\&quot;!!top_middle_menu_order\&quot; setTo=&lt;&lt;calc !!top_middle_menu_order 1&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-down}}&lt;/$button&gt; \n&lt;$button set=\&quot;!!top_middle_menu_order\&quot; setTo=&lt;&lt;calc !!top_middle_menu_order -1 0&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-up}}&lt;/$button&gt;&lt;$edit-text field='top_middle_menu_order' placeholder='Order' size=4/&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/table&gt;&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Middle Menu Settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021820834&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150124160659217&quot;,
+            &quot;caption&quot;: &quot;Top Middle Menu Settings&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Right Menu Basic Style&quot;: {
+            &quot;text&quot;: &quot;html .tc-toprightmenu {\n     display: block;\n     padding: 0px 0px 0px 0px;\n     position: absolute;\n     right: {{$:/inmysocks/iconmenus/icon_menu_settings!!top_right_menu_right_offset}};\n     top: inherit;\n     z-index: 99;\n     border-bottom-style: none;\n     font-size:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_right_menu_font_size}};\n     line-height:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}};\n     color:{{$:/inmysocks/iconmenus/icon_menu_settings!!top_right_menu_text_color}};\n     height: inherit;\n     overflow: inherit;\n     text-align: right;\n}\n&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Right Menu Basic Style&quot;,
+            &quot;tags&quot;: &quot;[[Top Right Menu Style]] [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021611019&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150125145928143&quot;,
+            &quot;caption&quot;: &quot;Top Right Menu Basic Style&quot;
+        },
+        &quot;$:/inmysocks/iconmenus/Top Right Menu Settings&quot;: {
+            &quot;text&quot;: &quot;Vertical Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_right_menu_vertical_offset'/&gt;&lt;br&gt;\nRight Offset: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_right_menu_right_offset'/&gt;&lt;br&gt;\nFont Size &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_right_menu_font_size'/&gt;&lt;br&gt;\nText Color: &lt;$edit-text tiddler='$:/inmysocks/iconmenus/icon_menu_settings' field='top_right_menu_text_color'/&gt;\n\nThe checkbox sets if the item is in the menu, the numbers in the `Order` column set the order in which the entries appear.\n\n&lt;table&gt;\n&lt;tr&gt;\n &lt;th&gt;In Menu?&lt;/th&gt;\n &lt;th&gt;Name&lt;/th&gt;\n &lt;th&gt;Order&lt;/th&gt;\n&lt;/tr&gt;\n&lt;$list filter='[tag[Menu Icon]nsort[top_right_menu_order]]'&gt;\n&lt;tr&gt;\n &lt;td&gt;&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag='$:/tags/TopRightMenu'&gt;&lt;/$checkbox&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=caption&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/td&gt;\n &lt;td&gt;&lt;$button set=\&quot;!!top_right_menu_order\&quot; setTo=&lt;&lt;calc !!top_right_menu_order 1&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-down}}&lt;/$button&gt; \n&lt;$button set=\&quot;!!top_right_menu_order\&quot; setTo=&lt;&lt;calc !!top_right_menu_order -1 0&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/chevron-up}}&lt;/$button&gt;&lt;$edit-text field='top_right_menu_order' placeholder='Order' size=4/&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/table&gt;&quot;,
+            &quot;title&quot;: &quot;$:/inmysocks/iconmenus/Top Right Menu Settings&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130021839105&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150123223246312&quot;,
+            &quot;caption&quot;: &quot;Top Right Menu Settings&quot;
+        },
+        &quot;Black Line&quot;: {
+            &quot;text&quot;: &quot;&lt;$list filter='[is[current]]'&gt;\n&lt;hr&gt;\n&lt;/$list&gt;&quot;,
+            &quot;title&quot;: &quot;Black Line&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ViewTemplate [[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130011522187&quot;,
+            &quot;list-after&quot;: &quot;$:/core/ui/ViewTemplate/title&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150123101005516&quot;
+        },
+        &quot;New Tiddler Template - Blank&quot;: {
+            &quot;text&quot;: &quot;&quot;,
+            &quot;title&quot;: &quot;New Tiddler Template - Blank&quot;,
+            &quot;tags&quot;: &quot;[[Icon Menus]]&quot;,
+            &quot;modifier&quot;: &quot;inmysocks&quot;,
+            &quot;modified&quot;: &quot;20150130011534507&quot;,
+            &quot;creator&quot;: &quot;inmysocks&quot;,
+            &quot;created&quot;: &quot;20150121163820346&quot;
+        }
+    }
+}</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9887,31 +10483,31 @@ Error message and password prompt
 <div created="20200730054105313" modified="20200730054113096" title="$:/SiteTitle">
 <pre>Programming Reference</pre>
 </div>
-<div created="20200730055506326" modified="20200730055526674" title="$:/state/sidebar">
+<div created="20200730055506326" modified="20200730061523840" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200730055204741" modified="20200730055207605" title="$:/state/tab--86143343">
+<div created="20200730055204741" modified="20200730061606216" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20200730055123461" modified="20200730055123461" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
 </div>
-<div created="20200730054140598" modified="20200730055200607" title="$:/state/tab-1749438307">
+<div created="20200730054140598" modified="20200730061600630" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200730054142419" modified="20200730054142419" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200730055113675" modified="20200730055143186" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/All</pre>
+<div created="20200730055113675" modified="20200730061539114" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20200730054857766" modified="20200730055144660" title="$:/state/tab/sidebar--595412856">
+<div created="20200730054857766" modified="20200730061623166" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
-<div created="20200730055739077" list="" modified="20200730055739077" title="$:/StoryList">
+<div created="20200730055739077" list="$:/Import $:/ControlPanel" modified="20200730061555808" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10917,6 +11513,9 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200730055215591" dependents="" description="Basic theme" modified="20200730055215591" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
+<pre></pre>
+</div>
+<div created="20200730061545510" modified="20200730061550590" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200730055215583" modified="20200730055215583" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
