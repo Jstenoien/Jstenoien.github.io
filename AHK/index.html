@@ -495,6 +495,8 @@ Error message and password prompt
 
 <li>Black Line</li>
 
+<li>Draft of 'AutoHotkey ToC'</li>
+
 <li>New Tiddler Template - Blank</li>
 
 </ul>
@@ -10035,7 +10037,25 @@ exports.run = function(value, operation, until, beyond, decimals, tiddler) {
 </div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
-</pre>
+
+# [[$:/inmysocks/iconmenus/icon/Advanced Search]]
+# [[$:/inmysocks/iconmenus/icon/Close All]]
+# [[$:/inmysocks/iconmenus/icon/Control Panel]]
+# [[$:/inmysocks/iconmenus/icon/Create New Tiddler From Template]]
+# [[$:/inmysocks/iconmenus/icon/Full Screen]]
+# [[$:/inmysocks/iconmenus/icon/Home]]
+# [[$:/inmysocks/iconmenus/icon/Import]]
+# [[$:/inmysocks/iconmenus/icon/Language]]
+# [[$:/inmysocks/iconmenus/icon/New Journal]]
+# [[$:/inmysocks/iconmenus/icon/Old Hide Menu Button]]
+# [[$:/inmysocks/iconmenus/icon/Permaview]]
+# [[$:/inmysocks/iconmenus/icon/Refresh]]
+# [[$:/inmysocks/iconmenus/icon/Save Wiki]]
+# [[$:/inmysocks/iconmenus/icon/Search]]
+# [[$:/inmysocks/iconmenus/icon/Storyview]]
+# [[$:/inmysocks/iconmenus/icon/Tag Manager]]
+# [[$:/inmysocks/iconmenus/icon/Theme]]
+# [[$:/inmysocks/iconmenus/icon/Wiki Title and Subtitle]]</pre>
 </div>
 <div caption="Icon Menu Settings" created="20150123193933540" creator="inmysocks" modified="20150130022936515" modifier="inmysocks" tags="$:/tags/ControlPanel [[Icon Menus]]" title="$:/inmysocks/iconmenus/Icon Menu Settings" topbar_height="2">
 <pre>\define thisMakeTiddlerReference()
@@ -10870,7 +10890,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730131912084" modified="20200730131912084" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200730055506326" modified="20200730141628381" title="$:/state/sidebar">
+<div created="20200730055506326" modified="20200730141723756" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20200730061918747" modified="20200730061918747" title="$:/state/tab--1498284803">
@@ -10885,8 +10905,8 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730055123461" modified="20200730055123461" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
 </div>
-<div created="20200730054140598" modified="20200730141632060" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20200730054140598" modified="20200730131443540" title="$:/state/tab-1749438307">
+<pre>$:/inmysocks/iconmenus/Icon Menu Settings</pre>
 </div>
 <div created="20200730054142419" modified="20200730054142419" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -10894,13 +10914,13 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730055113675" modified="20200730061539114" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20200730054857766" modified="20200730061623166" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20200730054857766" modified="20200730141718508" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200730131255988" list="$:/Import $:/ControlPanel" modified="20200730141629277" title="$:/StoryList">
+<div created="20200730141719773" list="[[Draft of 'AutoHotkey ToC']]" modified="20200730141719773" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200730061927198" title="$:/temp/advancedsearch">
@@ -12036,6 +12056,476 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>&lt;$list filter='[is[current]]'&gt;
 &lt;hr&gt;
 &lt;/$list&gt;</pre>
+</div>
+<div created="20200730131720628" draft.of="AutoHotkey ToC" draft.title="AutoHotkey ToC" modified="20200730144952661" tags="ToC AutoHotkey" title="Draft of 'AutoHotkey ToC'" type="text/vnd.tiddlywiki">
+<pre>&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt;&gt;
+
+!![[Quick Reference]]
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt; text=&quot;&quot;&gt;
+
+section content goes here
+
+&lt;/$reveal&gt;
+
+!![[Quick Reference]]
+&lt;$details summary=&quot;Usage and Syntax&quot;&gt;
+
+!!! *	[[Using the Program]]
+!!! *	[[Concepts and Conventions]]
+!!! *	[[Scripting Language]]
+!!! *	[[Hotkeys]]
+!!! *	[[Hotstrings]]
+!!! *	[[Remapping Keys]]
+!!! *	[[List of Keys]]
+!!! *	[[Scripts (misc)]]
+!!! *	[[Variables and Expressions]]
+!!! *	[[Functions]]
+!!! *	[[Labels]]
+!!! *	[[Threads]]
+!!! *	[[Debugging Clients]]
+!!! *	[[Compiler Directives]]
+&lt;$details summary=&quot;Objects&quot;&gt;
+
+!! *	[[Objects]]
+!!! **		[[Basic Usage]]
+!!! **		[[Extended Usage]]
+!!! **		[[Custom Objects]]
+!!! **		[[Default Base Object]]
+!!! **		[[Implementation]]
+&lt;/$details&gt;
+&lt;/$details&gt;
+!! [[Frequently Asked Questions]]
+!! [[Tutorial (quick start)]]
+!! [[Recent Changes]]
+!! [[Script Showcase]]
+!! [[Script Compatibility]]
+!! [[Command and Function Index]]
+&lt;$details summary=&quot;Environment&quot;&gt;
+
+!!! *	[[ClipWait]]
+!!! *	[[EnvGet]]
+!!! *	[[EnvSet]]
+!!! *	[[EnvUpdate]]
+!!! *	[[OnClipboardChange]]
+!!! *	[[SysGet]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;External Libraries&quot;&gt;
+
+!!! *	[[DllCall()]]
+!!! *	[[NumGet()]]
+!!! *	[[NumPut()]]
+!!! *	[[RegisterCallback()]]
+!!! *	[[StrGet()]]
+!!! *	[[StrPut()]]
+!!! *	[[VarSetCapacity()]]
+&lt;$details summary=&quot;COM&quot;&gt;
+
+!!! **		[[ComObjActive()]]
+!!! **		[[ComObjArray()]]
+!!! **		[[ComObjConnect()]]
+!!! **		[[ComObjCreate()]]
+!!! **		[[ComObjGet()]]
+!!! **		[[ComObjError()]]
+!!! **		[[ComObjFlags()]]
+!!! **		[[ComObjQuery()]]
+!!! **		[[ComObjType()]]
+!!! **		[[ComObjValue()]]
+!!! **		[[ObjAddRef() / ObjRelease()]]
+&lt;/$details&gt;
+&lt;/$details&gt;
+&lt;$details summary=&quot;File, Directory and Disk&quot;&gt;
+
+!!! *	[[Drive]]
+!!! *	[[DriveGet]]
+!!! *	[[DriveSpaceFree]]
+!!! *	[[FileAppend]]
+!!! *	[[FileCopy]]
+!!! *	[[FileCopyDir]]
+!!! *	[[FileCreateDir]]
+!!! *	[[FileCreateShortcut]]
+!!! *	[[FileDelete]]
+!!! *	[[FileEncoding]]
+!!! *	[[FileExist()]]
+!!! *	[[FileGetAttrib]]
+!!! *	[[FileGetShortcut]]
+!!! *	[[FileGetSize]]
+!!! *	[[FileGetTime]]
+!!! *	[[FileGetVersion]]
+!!! *	[[FileInstall]]
+!!! *	[[FileMove]]
+!!! *	[[FileMoveDir]]
+!!! *	[[FileOpen()]]
+!!! *	[[FileReadLine]]
+!!! *	[[FileRead]]
+!!! *	[[FileRecycle]]
+!!! *	[[FileRecycleEmpty]]
+!!! *	[[FileRemoveDir]]
+!!! *	[[FileSelectFile]]
+!!! *	[[FileSelectFolder]]
+!!! *	[[FileSetAttrib]]
+!!! *	[[FileSetTime]]
+!!! *	[[If[Not]Exist]]
+!!! *	[[IniDelete]]
+!!! *	[[IniRead]]
+!!! *	[[IniWrite]]
+!!! *	[[Long Paths]]
+!!! *	[[Loop (files &amp; folders)]]
+!!! *	[[Loop (read file contents)]]
+!!! *	[[SetWorkingDir]]
+!!! *	[[SplitPath]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Flow of Control&quot;&gt;
+
+!!! *	[[#Include[Again]]]
+!!! *	[[{ ... } (block)]]
+!!! *	[[Break]]
+!!! *	[[Catch]]
+!!! *	[[Continue]]
+!!! *	[[Critical]]
+!!! *	[[Else]]
+!!! *	[[Exit]]
+!!! *	[[ExitApp]]
+!!! *	[[Finally]]
+!!! *	[[For-loop]]
+!!! *	[[Gosub]]
+!!! *	[[Goto]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;If&quot;&gt;
+
+
+&lt;$details summary=&quot;If&quot;&gt;
+
+!! *	[[If]]
+!!! **		[[If (traditional)]]
+!!! **		[[If (expression)]]
+!!! **		[[If var [not] between Low and High]]
+!!! **		[[If var is [not] type]]
+!!! **		[[If var [not] in/contains MatchList]]
+!!! **		[[If[Not]Exist]]
+!!! **		[[If[Not]InString]]
+!!! **		[[IfMsgBox]]
+!!! **		[[IfWin[Not]Active]]
+!!! **		[[IfWin[Not]Exist]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Loop&quot;&gt;
+
+!! *	[[Loop]]
+!!! **		[[Loop]]
+!!! **		[[Loop (files &amp; folders)]]
+!!! **		[[Loop (parse a string)]]
+!!! **		[[Loop (read file contents)]]
+!!! **		[[Loop (registry)]]
+&lt;/$details&gt;
+!!! *	[[OnError()]]
+!!! *	[[OnExit]]
+!!! *	[[Pause]]
+!!! *	[[Reload]]
+!!! *	[[Return]]
+!!! *	[[SetBatchLines]]
+!!! *	[[SetTimer]]
+!!! *	[[Sleep]]
+!!! *	[[Suspend]]
+!!! *	[[Switch]]
+!!! *	[[Thread]]
+!!! *	[[Throw]]
+!!! *	[[Try]]
+!!! *	[[Until]]
+!!! *	[[While-loop]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Graphical User Interfaces&quot;&gt;
+
+!!! *	[[FileSelectFile]]
+!!! *	[[FileSelectFolder]]
+!!! *	[[Gui]]
+!!! *	[[Gui control types]]
+!!! *	[[GuiControl]]
+!!! *	[[GuiControlGet]]
+!!! *	[[Gui ListView control]]
+!!! *	[[Gui TreeView control]]
+!!! *	[[IfMsgBox]]
+!!! *	[[Image Handles]]
+!!! *	[[InputBox]]
+!!! *	[[LoadPicture()]]
+!!! *	[[Menu]]
+!!! *	[[MenuGetHandle()]]
+!!! *	[[MenuGetName()]]
+!!! *	[[MsgBox]]
+!!! *	[[OnMessage()]]
+!!! *	[[Progress]]
+!!! *	[[SplashImage]]
+!!! *	[[SplashTextOn/SplashTextOff]]
+!!! *	[[Standard Windows Fonts]]
+!!! *	[[Styles for a window/control]]
+!!! *	[[ToolTip]]
+!!! *	[[TrayTip]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Maths&quot;&gt;
+
+! [[Maths]]
+!!! *	[[Abs()]]
+!!! *	[[Ceil()]]
+!!! *	[[EnvAdd (and date math)]]
+!!! *	[[EnvDiv]]
+!!! *	[[EnvMult]]
+!!! *	[[EnvSub (and date diff)]]
+!!! *	[[Exp()]]
+!!! *	[[Floor()]]
+!!! *	[[Log()]]
+!!! *	[[Ln()]]
+!!! *	[[Max()]]
+!!! *	[[Min()]]
+!!! *	[[Mod()]]
+!!! *	[[Random]]
+!!! *	[[Round()]]
+!!! *	[[SetFormat]]
+!!! *	[[Sqrt()]]
+!!! *	[[Sin() / Cos() / Tan()]]
+!!! *	[[ASin() / ACos() / ATan()]]
+!!! *	[[Transform]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Mouse and Keyboard&quot;&gt;
+
+&lt;$details summary=&quot;Hotkeys and Hotstrings&quot;&gt;
+
+!! *	[[Hotkeys and Hotstrings]]
+!!! **		[[#HotkeyInterval]]
+!!! **		[[#HotkeyModifierTimeout]]
+!!! **		[[#Hotstring]]
+!!! **		[[#If]]
+!!! **		[[#IfTimeOut]]
+!!! **		[[#IfWin[Not]Active]]
+!!! **		[[#IfWin[Not]Exist]]
+!!! **		[[#InputLevel]]
+!!! **		[[#MaxHotkeysPerInterval]]
+!!! **		[[#MaxThreads]]
+!!! **		[[#MaxThreadsBuffer]]
+!!! **		[[#MaxThreadsPerHotkey]]
+!!! **		[[#MenuMaskKey]]
+!!! **		[[#UseHook]]
+!!! **		[[Hotkey]]
+!!! **		[[Hotstring()]]
+!!! **		[[Hotstrings &amp; auto-replace]]
+!!! **		[[ListHotkeys]]
+!!! **		[[Suspend]]
+&lt;/$details&gt;
+!!! *	[[#InstallKeybdHook]]
+!!! *	[[#InstallMouseHook]]
+!!! *	[[#KeyHistory]]
+!!! *	[[BlockInput]]
+!!! *	[[Click]]
+!!! *	[[ControlClick]]
+!!! *	[[ControlSend[Raw]]]
+!!! *	[[CoordMode]]
+!!! *	[[GetKeyName()]]
+!!! *	[[GetKeySC()]]
+!!! *	[[GetKeyState]]
+!!! *	[[GetKeyVK()]]
+!!! *	[[List of Keys]]
+!!! *	[[KeyHistory]]
+!!! *	[[KeyWait]]
+!!! *	[[Input]]
+!!! *	[[InputHook()]]
+!!! *	[[MouseClick]]
+!!! *	[[MouseClickDrag]]
+!!! *	[[MouseGetPos]]
+!!! *	[[MouseMove]]
+!!! *	[[Send[Raw|Input|Play|Event]]]
+!!! *	[[SendLevel]]
+!!! *	[[SendMode]]
+!!! *	[[SetCapsLockState]]
+!!! *	[[SetDefaultMouseSpeed]]
+!!! *	[[SetKeyDelay]]
+!!! *	[[SetMouseDelay]]
+!!! *	[[SetNumLockState]]
+!!! *	[[SetScrollLockState]]
+!!! *	[[SetStoreCapsLockMode]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Misc.&quot;&gt;
+
+!!! *	[[AutoTrim]]
+!!! *	[[Edit]]
+!!! *	[[Func()]]
+!!! *	[[IsByRef()]]
+!!! *	[[IsFunc()]]
+!!! *	[[IsLabel()]]
+!!! *	[[IsObject()]]
+!!! *	[[ListLines]]
+!!! *	[[ListVars]]
+!!! *	[[OutputDebug]]
+!!! *	[[Transform]]
+!!! *	[[URLDownloadToFile]]
+!!! *	[[VarSetCapacity()]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Object Types&quot;&gt;
+
+!!! *	[[Object]]
+!!! *	[[Enumerator Object]]
+!!! *	[[Exception Object]]
+!!! *	[[File Object]]
+!!! *	[[Func Object]]
+!!! *	[[Function Objects]]
+!!! *	[[RegExMatch Object]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Process&quot;&gt;
+
+!!! *	[[Process]]
+!!! *	[[Run[Wait]]]
+!!! *	[[RunAs]]
+!!! *	[[Shutdown]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Registry&quot;&gt;
+
+!!! *	[[Loop (registry)]]
+!!! *	[[RegDelete]]
+!!! *	[[RegRead]]
+!!! *	[[RegWrite]]
+!!! *	[[SetRegView]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Screen&quot;&gt;
+
+!!! *	[[ImageSearch]]
+!!! *	[[PixelGetColor]]
+!!! *	[[PixelSearch]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Sound&quot;&gt;
+
+!!! *	[[SoundBeep]]
+!!! *	[[SoundGet]]
+!!! *	[[SoundGetWaveVolume]]
+!!! *	[[SoundPlay]]
+!!! *	[[SoundSet]]
+!!! *	[[SoundSetWaveVolume]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;String&quot;&gt;
+
+!!! *	[[Asc()]]
+!!! *	[[Chr()]]
+!!! *	[[Format()]]
+!!! *	[[FormatTime]]
+!!! *	[[If[Not]InString]]
+!!! *	[[If var [not] in/contains MatchList]]
+!!! *	[[InStr()]]
+!!! *	[[Loop (parse a string)]]
+!!! *	[[Ord()]]
+!!! *	[[RegEx Quick Reference]]
+!!! *	[[RegExMatch()]]
+!!! *	[[RegExReplace()]]
+!!! *	[[SetEnv (var = value)]]
+!!! *	[[SetFormat]]
+!!! *	[[Sort]]
+!!! *	[[StringCaseSense]]
+!!! *	[[StringGetPos]]
+!!! *	[[StringLeft/StringRight]]
+!!! *	[[StringLen]]
+!!! *	[[StringLower/StringUpper]]
+!!! *	[[StringMid]]
+!!! *	[[StringReplace]]
+!!! *	[[StringSplit]]
+!!! *	[[StringTrimLeft/StringTrimRight]]
+!!! *	[[StrGet()]]
+!!! *	[[StrLen()]]
+!!! *	[[StrPut()]]
+!!! *	[[StrReplace()]]
+!!! *	[[StrSplit()]]
+!!! *	[[SubStr()]]
+!!! *	[[Trim() / LTrim() / RTrim()]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Window&quot;&gt;
+
+&lt;$details summary=&quot;Controls&quot;&gt;
+
+!!! **		[[Control]]
+!!! **		[[ControlClick]]
+!!! **		[[ControlFocus]]
+!!! **		[[ControlGet]]
+!!! **		[[ControlGetFocus]]
+!!! **		[[ControlGetPos]]
+!!! **		[[ControlGetText]]
+!!! **		[[ControlMove]]
+!!! **		[[ControlSend[Raw]]]
+!!! **		[[ControlSetText]]
+!!! **		[[Menu]]
+!!! **		[[PostMessage/SendMessage]]
+!!! **		[[SetControlDelay]]
+!!! **		[[WinMenuSelectItem]]
+&lt;/$details&gt;
+&lt;$details summary=&quot;Window Groups&quot;&gt;
+
+!!! **		[[GroupActivate]]
+!!! **		[[GroupAdd]]
+!!! **		[[GroupClose]]
+!!! **		[[GroupDeactivate]]
+&lt;/$details&gt;
+!!! *	[[Window Titles]]
+!!! *	[[#WinActivateForce]]
+!!! *	[[DetectHiddenText]]
+!!! *	[[DetectHiddenWindows]]
+!!! *	[[IfWin[Not]Active]]
+!!! *	[[IfWin[Not]Exist]]
+!!! *	[[SetTitleMatchMode]]
+!!! *	[[SetWinDelay]]
+!!! *	[[StatusBarGetText]]
+!!! *	[[StatusBarWait]]
+!!! *	[[WinActivate]]
+!!! *	[[WinActivateBottom]]
+!!! *	[[WinActive()]]
+!!! *	[[WinClose]]
+!!! *	[[WinExist()]]
+!!! *	[[WinGet]]
+!!! *	[[WinGetActiveStats]]
+!!! *	[[WinGetActiveTitle]]
+!!! *	[[WinGetClass]]
+!!! *	[[WinGetPos]]
+!!! *	[[WinGetText]]
+!!! *	[[WinGetTitle]]
+!!! *	[[WinHide]]
+!!! *	[[WinKill]]
+!!! *	[[WinMaximize]]
+!!! *	[[WinMinimize]]
+!!! *	[[WinMinimizeAll[Undo]]]
+!!! *	[[WinMove]]
+!!! *	[[WinRestore]]
+!!! *	[[WinSet]]
+!!! *	[[WinSetTitle]]
+!!! *	[[WinShow]]
+!!! *	[[WinWait]]
+!!! *	[[WinWait[Not]Active]]
+!!! *	[[WinWaitClose]]
+&lt;$details summary=&quot;#Directives&quot;&gt;
+
+!!! *	[[#AllowSameLineComments]]
+!!! *	[[#ClipboardTimeout]]
+!!! *	[[#CommentFlag]]
+!!! *	[[#ErrorStdOut]]
+!!! *	[[#EscapeChar]]
+!!! *	[[#HotkeyInterval]]
+!!! *	[[#HotkeyModifierTimeout]]
+!!! *	[[#Hotstring]]
+!!! *	[[#If]]
+!!! *	[[#IfWin[Not]Active]]
+!!! *	[[#IfWin[Not]Exist]]
+!!! *	[[#IfTimeout]]
+!!! *	[[#Include[Again]]]
+!!! *	[[#InputLevel]]
+!!! *	[[#InstallKeybdHook]]
+!!! *	[[#InstallMouseHook]]
+!!! *	[[#KeyHistory]]
+!!! *	[[#MaxHotkeysPerInterval]]
+!!! *	[[#MaxMem]]
+!!! *	[[#MaxThreads]]
+!!! *	[[#MaxThreadsBuffer]]
+!!! *	[[#MaxThreadsPerHotkey]]
+!!! *	[[#MenuMaskKey]]
+!!! *	[[#NoEnv]]
+!!! *	[[#NoTrayIcon]]
+!!! *	[[#Persistent]]
+!!! *	[[#Requires]]
+!!! *	[[#SingleInstance]]
+!!! *	[[#UseHook]]
+!!! *	[[#Warn]]
+!!! *	[[#WinActivateForce]]
+&lt;/$details&gt;</pre>
 </div>
 <div created="20150121163820346" creator="inmysocks" modified="20150130011534507" modifier="inmysocks" tags="[[Icon Menus]]" title="New Tiddler Template - Blank">
 <pre></pre>
