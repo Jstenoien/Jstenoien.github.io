@@ -505,11 +505,11 @@ Error message and password prompt
 
 <li>Languages</li>
 
-<li>Markup</li>
-
 <li>New Tiddler Template - Blank</li>
 
 <li>Run Multiple Parallel Scripts from a single Hotkey</li>
+
+<li>TiddlyWiki Markup by tobibeer</li>
 
 <li>TiddlyWiki ToC</li>
 
@@ -641,8 +641,8 @@ exports.run = function(value, operation, until, beyond, decimals, tiddler) {
 <div created="20200730054900305" modified="20200730054900305" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager">
 <pre>show</pre>
 </div>
-<div created="20200731150431682" modified="20200731150444065" title="$:/config/RelinkOnRename">
-<pre>no</pre>
+<div created="20200731150431682" modified="20200731151944208" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22">
 <pre>{
@@ -10899,7 +10899,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730171746046" modified="20200730171755006" title="$:/state/tab--1172982408">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
 </div>
-<div created="20200730061918747" modified="20200731150146046" title="$:/state/tab--1498284803">
+<div created="20200730061918747" modified="20200731152027991" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200730062808599" modified="20200730131521203" title="$:/state/tab--68548080">
@@ -10926,11 +10926,11 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200731143445626" list="Languages [[TiddlyWiki ToC]] Markup" modified="20200731151737816" title="$:/StoryList">
+<div created="20200731143445626" list="Languages" modified="20200731152014497" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200730061921862" modified="20200731151150693" title="$:/temp/advancedsearch">
-<pre>list-search</pre>
+<div created="20200730061921862" modified="20200731152016126" title="$:/temp/advancedsearch">
+<pre>TiddlyWiki Markup by tobibeer</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10990,7 +10990,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
     }
 }</pre>
 </div>
-<div created="20200730131828924" modified="20200731151256471" title="$:/temp/NewTagName">
+<div created="20200730131828924" modified="20200731152005900" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200730055215591" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200730055215591" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -12677,7 +12677,35 @@ Window Groups {{$:/core/images/fold-button}}
 <pre>! [[AutoHotkey|AutoHotkey ToC]]
 ! [[TiddlyWiki|TiddlyWiki ToC]]</pre>
 </div>
-<div bag="default" caption="Markup" created="20151005070658821" creator="Tobias Beer" icon="$:/core/images/right-arrow" list="bold italics bold-italics underline strikethrough superscript subscript dashes headings horizontal-rules code monospaced-codeblock hard-linebreaks paragraphs blockquotes unordered-lists ordered-lists definition-lists mixed-lists css-classes internal-links wiki-links external-links filesystem-links external-links-forced images external-images attribute-transclusion css-class-wrappers styled-wrappers combined-style-wrappers inline-styles tables html-elements html-element-attributes multiline-nested-html transclusion macros typed-blocks" menu="main" menu-icon="{{$:/core/images/right-arrow}}" modified="20200731151303270" order="2" revision="0" sourceurl="http://tobibeer.github.io/tb5/#Markup%20Reference" summary="a destillation of [[WikiText|http://tiddlywiki.com/#WikiText]] formatting in tw5" tags="TiddlyWiki Markup Reference" title="Markup" type="text/vnd.tiddlywiki">
+<div created="20150121163820346" creator="inmysocks" modified="20150130011534507" modifier="inmysocks" tags="[[Icon Menus]]" title="New Tiddler Template - Blank">
+<pre></pre>
+</div>
+<div created="20200731143457227" modified="20200731145337437" sourceurl="https://www.autohotkey.com/boards/viewtopic.php?t=68332" title="Run Multiple Parallel Scripts from a single Hotkey">
+<pre>!Example:
+
+Instead of:
+
+```
+q::Send, 1
+
+q::Send, 1
+
+q::Send, 1
+```
+
+Each [[Hotkey|Hotkeys]] after the first needs to be preceded by a Tilde `~`
+
+```
+q::Send, 1
+
+~q::Send, 1
+
+~q::Send, 1
+```
+
+@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
+</div>
+<div bag="default" caption="Markup" created="20151005070658821" creator="Tobias Beer" icon="$:/core/images/right-arrow" list="bold italics bold-italics underline strikethrough superscript subscript dashes headings horizontal-rules code monospaced-codeblock hard-linebreaks paragraphs blockquotes unordered-lists ordered-lists definition-lists mixed-lists css-classes internal-links wiki-links external-links filesystem-links external-links-forced images external-images attribute-transclusion css-class-wrappers styled-wrappers combined-style-wrappers inline-styles tables html-elements html-element-attributes multiline-nested-html transclusion macros typed-blocks" menu="main" menu-icon="{{$:/core/images/right-arrow}}" modified="20200731152012708" order="2" revision="0" sourceurl="http://tobibeer.github.io/tb5/#Markup%20Reference" summary="a destillation of [[WikiText|http://tiddlywiki.com/#WikiText]] formatting in tw5" tags="TiddlyWiki Reference Markup" title="TiddlyWiki Markup by tobibeer" type="text/vnd.tiddlywiki">
 <pre>Figure out how to add filter box later: https://tobibeer.github.io/tw/filters/#Filter%20Examples
 
 
@@ -13502,34 +13530,6 @@ margin:0;
 width:16px;
 }
 &lt;/style&gt;
-
-@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
-</div>
-<div created="20150121163820346" creator="inmysocks" modified="20150130011534507" modifier="inmysocks" tags="[[Icon Menus]]" title="New Tiddler Template - Blank">
-<pre></pre>
-</div>
-<div created="20200731143457227" modified="20200731145337437" sourceurl="https://www.autohotkey.com/boards/viewtopic.php?t=68332" title="Run Multiple Parallel Scripts from a single Hotkey">
-<pre>!Example:
-
-Instead of:
-
-```
-q::Send, 1
-
-q::Send, 1
-
-q::Send, 1
-```
-
-Each [[Hotkey|Hotkeys]] after the first needs to be preceded by a Tilde `~`
-
-```
-q::Send, 1
-
-~q::Send, 1
-
-~q::Send, 1
-```
 
 @@color:grey;,,source: {{!!sourceurl}},,@@</pre>
 </div>
