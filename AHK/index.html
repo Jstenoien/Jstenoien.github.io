@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/.tb/macros/calc</li>
 
+<li>$:/.tb/templates/list-search-markup</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/advanced-search</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import</li>
@@ -501,6 +503,8 @@ Error message and password prompt
 
 <li>Display sourceurl field</li>
 
+<li>Draft of 'Markup'</li>
+
 <li>Languages</li>
 
 <li>Markup</li>
@@ -627,6 +631,11 @@ exports.run = function(value, operation, until, beyond, decimals, tiddler) {
 
 })();
 </pre>
+</div>
+<div created="20200731150032104" creator="inmysocks" modified="20200731150056582" modifier="inmysocks" title="$:/.tb/templates/list-search-markup">
+<pre>&lt;dl class=&quot;tb5-markup&quot;&gt;
+&lt;$transclude field=text/&gt;
+&lt;/dl&gt;</pre>
 </div>
 <div created="20200730061914545" modified="20200730061914545" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/advanced-search">
 <pre>show</pre>
@@ -10919,7 +10928,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200731143445626" list="$:/Import Languages" modified="20200731145458013" title="$:/StoryList">
+<div created="20200731143445626" list="$:/.tb/templates/list-search-markup $:/Import [[Draft of 'Markup']] Languages" modified="20200731145551901" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200730061927198" title="$:/temp/advancedsearch">
@@ -12665,6 +12674,24 @@ Window Groups {{$:/core/images/fold-button}}
 </div>
 <div caption="Display sourceurl Field" created="20200731144749519" modified="20200731145311022" tags="$:/tags/TextEditor/Snippet" title="Display sourceurl field">
 <pre>@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
+</div>
+<div bag="default" caption="Markup" created="20151005070658821" creator="Tobias Beer" draft.of="Markup" draft.title="Markup" icon="$:/core/images/right-arrow" list="bold italics bold-italics underline strikethrough superscript subscript dashes headings horizontal-rules code monospaced-codeblock hard-linebreaks paragraphs blockquotes unordered-lists ordered-lists definition-lists mixed-lists css-classes internal-links wiki-links external-links filesystem-links external-links-forced images external-images attribute-transclusion css-class-wrappers styled-wrappers combined-style-wrappers inline-styles tables html-elements html-element-attributes multiline-nested-html transclusion macros typed-blocks" menu="main" menu-icon="{{$:/core/images/right-arrow}}" modified="20200731145614222" order="2" revision="0" summary="a destillation of [[WikiText|http://tiddlywiki.com/#WikiText]] formatting in tw5" title="Draft of 'Markup'" type="text/vnd.tiddlywiki">
+<pre>See [[Markup Reference]] for a non-filterable version to easily import to your wiki.
+
+&lt;div class=&quot;filter-markup&quot;&gt;
+&lt;&lt;list-search
+filter:&quot;[[Markup]list[]]&quot;
+search:search
+state:&quot;$:/temp/tb/markup-search&quot;
+template:&quot;$:/.tb/templates/list-search-markup&quot;
+placeholder:&quot;Filter markup examples...&quot;&gt;&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.filter-markup input{
+width:48%;
+margin-top:10px;
+}
+&lt;/style&gt;</pre>
 </div>
 <div created="20200730171911992" modified="20200730172212111" tags="MetaToC ToC" title="Languages" type="text/vnd.tiddlywiki">
 <pre>! [[AutoHotkey|AutoHotkey ToC]]</pre>
