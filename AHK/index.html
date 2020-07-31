@@ -501,11 +501,13 @@ Error message and password prompt
 
 <li>Display sourceurl field</li>
 
-<li>Draft of 'Run Multiple Parallel Scripts from a single Hotkey'</li>
-
 <li>Languages</li>
 
+<li>Markup</li>
+
 <li>New Tiddler Template - Blank</li>
+
+<li>Run Multiple Parallel Scripts from a single Hotkey</li>
 
 </ul>
 </p>
@@ -10049,24 +10051,7 @@ exports.run = function(value, operation, until, beyond, decimals, tiddler) {
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/inmysocks/iconmenus/icon/Advanced Search]]
-# [[$:/inmysocks/iconmenus/icon/Close All]]
-# [[$:/inmysocks/iconmenus/icon/Control Panel]]
-# [[$:/inmysocks/iconmenus/icon/Create New Tiddler From Template]]
-# [[$:/inmysocks/iconmenus/icon/Full Screen]]
-# [[$:/inmysocks/iconmenus/icon/Home]]
-# [[$:/inmysocks/iconmenus/icon/Import]]
-# [[$:/inmysocks/iconmenus/icon/Language]]
-# [[$:/inmysocks/iconmenus/icon/New Journal]]
-# [[$:/inmysocks/iconmenus/icon/Old Hide Menu Button]]
-# [[$:/inmysocks/iconmenus/icon/Permaview]]
-# [[$:/inmysocks/iconmenus/icon/Refresh]]
-# [[$:/inmysocks/iconmenus/icon/Save Wiki]]
-# [[$:/inmysocks/iconmenus/icon/Search]]
-# [[$:/inmysocks/iconmenus/icon/Storyview]]
-# [[$:/inmysocks/iconmenus/icon/Tag Manager]]
-# [[$:/inmysocks/iconmenus/icon/Theme]]
-# [[$:/inmysocks/iconmenus/icon/Wiki Title and Subtitle]]</pre>
+# [[Markup]]</pre>
 </div>
 <div caption="Icon Menu Settings" created="20150123193933540" creator="inmysocks" modified="20150130022936515" modifier="inmysocks" tags="$:/tags/ControlPanel [[Icon Menus]]" title="$:/inmysocks/iconmenus/Icon Menu Settings" topbar_height="2">
 <pre>\define thisMakeTiddlerReference()
@@ -10901,8 +10886,8 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730131912084" modified="20200730131912084" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200730055506326" modified="20200730173417708" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20200730055506326" modified="20200731145510917" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20200730171746046" modified="20200730171755006" title="$:/state/tab--1172982408">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
@@ -10928,13 +10913,13 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730055113675" modified="20200730061539114" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20200730054857766" modified="20200730141718508" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200730054857766" modified="20200731145455204" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200731143445626" list="Languages [[AutoHotkey ToC]] [[Draft of 'Run Multiple Parallel Scripts from a single Hotkey']] [[Display sourceurl field]]" modified="20200731143447810" title="$:/StoryList">
+<div created="20200731143445626" list="$:/Import Languages" modified="20200731145458013" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200730061927198" title="$:/temp/advancedsearch">
@@ -12681,7 +12666,31 @@ Window Groups {{$:/core/images/fold-button}}
 <div caption="Display sourceurl Field" created="20200731144749519" modified="20200731145311022" tags="$:/tags/TextEditor/Snippet" title="Display sourceurl field">
 <pre>@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
 </div>
-<div created="20200731143457227" draft.of="Run Multiple Parallel Scripts from a single Hotkey" draft.title="Run Multiple Parallel Scripts from a single Hotkey" modified="20200731145251398" sourceurl="https://www.autohotkey.com/boards/viewtopic.php?t=68332" title="Draft of 'Run Multiple Parallel Scripts from a single Hotkey'">
+<div created="20200730171911992" modified="20200730172212111" tags="MetaToC ToC" title="Languages" type="text/vnd.tiddlywiki">
+<pre>! [[AutoHotkey|AutoHotkey ToC]]</pre>
+</div>
+<div bag="default" caption="Markup" created="20151005070658821" creator="Tobias Beer" icon="$:/core/images/right-arrow" list="bold italics bold-italics underline strikethrough superscript subscript dashes headings horizontal-rules code monospaced-codeblock hard-linebreaks paragraphs blockquotes unordered-lists ordered-lists definition-lists mixed-lists css-classes internal-links wiki-links external-links filesystem-links external-links-forced images external-images attribute-transclusion css-class-wrappers styled-wrappers combined-style-wrappers inline-styles tables html-elements html-element-attributes multiline-nested-html transclusion macros typed-blocks" menu="main" menu-icon="{{$:/core/images/right-arrow}}" modified="20151111085350748" order="2" revision="0" summary="a destillation of [[WikiText|http://tiddlywiki.com/#WikiText]] formatting in tw5" title="Markup" type="text/vnd.tiddlywiki">
+<pre>See [[Markup Reference]] for a non-filterable version to easily import to your wiki.
+
+&lt;div class=&quot;filter-markup&quot;&gt;
+&lt;&lt;list-search
+filter:&quot;[[Markup]list[]]&quot;
+search:search
+state:&quot;$:/temp/tb/markup-search&quot;
+template:&quot;$:/.tb/templates/list-search-markup&quot;
+placeholder:&quot;Filter markup examples...&quot;&gt;&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.filter-markup input{
+width:48%;
+margin-top:10px;
+}
+&lt;/style&gt;</pre>
+</div>
+<div created="20150121163820346" creator="inmysocks" modified="20150130011534507" modifier="inmysocks" tags="[[Icon Menus]]" title="New Tiddler Template - Blank">
+<pre></pre>
+</div>
+<div created="20200731143457227" modified="20200731145337437" sourceurl="https://www.autohotkey.com/boards/viewtopic.php?t=68332" title="Run Multiple Parallel Scripts from a single Hotkey">
 <pre>!Example:
 
 Instead of:
@@ -12704,14 +12713,7 @@ q::Send, 1
 ~q::Send, 1
 ```
 
-@@color:grey;,,source: {{!!sourceurl}},,@@
-</pre>
-</div>
-<div created="20200730171911992" modified="20200730172212111" tags="MetaToC ToC" title="Languages" type="text/vnd.tiddlywiki">
-<pre>! [[AutoHotkey|AutoHotkey ToC]]</pre>
-</div>
-<div created="20150121163820346" creator="inmysocks" modified="20150130011534507" modifier="inmysocks" tags="[[Icon Menus]]" title="New Tiddler Template - Blank">
-<pre></pre>
+@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
 </div>
 
 
