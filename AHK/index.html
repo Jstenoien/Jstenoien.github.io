@@ -503,6 +503,8 @@ Error message and password prompt
 
 <li>Display sourceurl field</li>
 
+<li>Draft of 'AutoHotkey ToC'</li>
+
 <li>Languages</li>
 
 <li>Markup</li>
@@ -510,6 +512,8 @@ Error message and password prompt
 <li>New Tiddler Template - Blank</li>
 
 <li>Run Multiple Parallel Scripts from a single Hotkey</li>
+
+<li>TiddlyWiki ToC</li>
 
 </ul>
 </p>
@@ -10924,7 +10928,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200731143445626" list="Languages" modified="20200731151208328" title="$:/StoryList">
+<div created="20200731143445626" list="Languages [[TiddlyWiki ToC]] [[Draft of 'AutoHotkey ToC']]" modified="20200731151412689" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200731151150693" title="$:/temp/advancedsearch">
@@ -12671,6 +12675,616 @@ Window Groups {{$:/core/images/fold-button}}
 <div caption="Display sourceurl Field" created="20200731144749519" modified="20200731145311022" tags="$:/tags/TextEditor/Snippet" title="Display sourceurl field">
 <pre>@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
 </div>
+<div created="20200730131720628" draft.of="AutoHotkey ToC" draft.title="AutoHotkey ToC" modified="20200731151418456" tags="ToC AutoHotkey AHKToC" title="Draft of 'AutoHotkey ToC'" type="text/vnd.tiddlywiki">
+<pre>&lt;ul style=&quot;list-style-type:none&quot;&gt;
+&lt;li&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup26&quot;&gt;&gt;&gt;
+
+!.ToCLvl1 Official Documentation v1 {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup26&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+
+!!.ToCLvl2 [[Quick Reference]]
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Usage and Syntax {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Using the Program]]&lt;/li&gt;
+&lt;li&gt;[[Concepts and Conventions]]&lt;/li&gt;
+&lt;li&gt;[[Scripting Language]]&lt;/li&gt;
+&lt;li&gt;[[Hotkeys]]&lt;/li&gt;
+&lt;li&gt;[[Hotstrings]]&lt;/li&gt;
+&lt;li&gt;[[Remapping Keys]]&lt;/li&gt;
+&lt;li&gt;[[List of Keys]]&lt;/li&gt;
+&lt;li&gt;[[Scripts (misc)]]&lt;/li&gt;
+&lt;li&gt;[[Variables and Expressions]]&lt;/li&gt;
+&lt;li&gt;[[Functions]]&lt;/li&gt;
+&lt;li&gt;[[Labels]]&lt;/li&gt;
+&lt;li&gt;[[Threads]]&lt;/li&gt;
+&lt;li&gt;[[Debugging Clients]]&lt;/li&gt;
+&lt;li&gt;[[Compiler Directives]]&lt;/li&gt;
+&lt;li&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup2&quot;&gt;&gt;&gt;
+[[Objects]] {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup2&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Basic Usage]]&lt;/li&gt;
+&lt;li&gt;[[Extended Usage]]&lt;/li&gt;
+&lt;li&gt;[[Custom Objects]]&lt;/li&gt;
+&lt;li&gt;[[Default Base Object]]&lt;/li&gt;
+&lt;li&gt;[[Implementation]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+!!.ToCLvl2 [[Frequently Asked Questions]]
+!!.ToCLvl2 [[Tutorial (quick start)]]
+!!.ToCLvl2 [[Recent Changes]]
+!!.ToCLvl2 [[Script Showcase]]
+!!.ToCLvl2 [[Script Compatibility]]
+!!.ToCLvl2 [[Command and Function Index]]
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup3&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Environment {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup3&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[ClipWait]]&lt;/li&gt;
+&lt;li&gt;[[EnvGet]]&lt;/li&gt;
+&lt;li&gt;[[EnvSet]]&lt;/li&gt;
+&lt;li&gt;[[EnvUpdate]]&lt;/li&gt;
+&lt;li&gt;[[OnClipboardChange]]&lt;/li&gt;
+&lt;li&gt;[[SysGet]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup4&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 External Libraries {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup4&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[DllCall()]]&lt;/li&gt;
+&lt;li&gt;[[NumGet()]]&lt;/li&gt;
+&lt;li&gt;[[NumPut()]]&lt;/li&gt;
+&lt;li&gt;[[RegisterCallback()]]&lt;/li&gt;
+&lt;li&gt;[[StrGet()]]&lt;/li&gt;
+&lt;li&gt;[[StrPut()]]&lt;/li&gt;
+&lt;li&gt;[[VarSetCapacity()]]&lt;/li&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup5&quot;&gt;&gt;&gt;
+COM {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup5&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[ComObjActive()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjArray()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjConnect()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjCreate()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjGet()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjError()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjFlags()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjQuery()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjType()]]&lt;/li&gt;
+&lt;li&gt;[[ComObjValue()]]&lt;/li&gt;
+&lt;li&gt;[[ObjAddRef() / ObjRelease()]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup6&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 File, Directory and Disk {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup6&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Drive]]&lt;/li&gt;
+&lt;li&gt;[[DriveGet]]&lt;/li&gt;
+&lt;li&gt;[[DriveSpaceFree]]&lt;/li&gt;
+&lt;li&gt;[[FileAppend]]&lt;/li&gt;
+&lt;li&gt;[[FileCopy]]&lt;/li&gt;
+&lt;li&gt;[[FileCopyDir]]&lt;/li&gt;
+&lt;li&gt;[[FileCreateDir]]&lt;/li&gt;
+&lt;li&gt;[[FileCreateShortcut]]&lt;/li&gt;
+&lt;li&gt;[[FileDelete]]&lt;/li&gt;
+&lt;li&gt;[[FileEncoding]]&lt;/li&gt;
+&lt;li&gt;[[FileExist()]]&lt;/li&gt;
+&lt;li&gt;[[FileGetAttrib]]&lt;/li&gt;
+&lt;li&gt;[[FileGetShortcut]]&lt;/li&gt;
+&lt;li&gt;[[FileGetSize]]&lt;/li&gt;
+&lt;li&gt;[[FileGetTime]]&lt;/li&gt;
+&lt;li&gt;[[FileGetVersion]]&lt;/li&gt;
+&lt;li&gt;[[FileInstall]]&lt;/li&gt;
+&lt;li&gt;[[FileMove]]&lt;/li&gt;
+&lt;li&gt;[[FileMoveDir]]&lt;/li&gt;
+&lt;li&gt;[[FileOpen()]]&lt;/li&gt;
+&lt;li&gt;[[FileReadLine]]&lt;/li&gt;
+&lt;li&gt;[[FileRead]]&lt;/li&gt;
+&lt;li&gt;[[FileRecycle]]&lt;/li&gt;
+&lt;li&gt;[[FileRecycleEmpty]]&lt;/li&gt;
+&lt;li&gt;[[FileRemoveDir]]&lt;/li&gt;
+&lt;li&gt;[[FileSelectFile]]&lt;/li&gt;
+&lt;li&gt;[[FileSelectFolder]]&lt;/li&gt;
+&lt;li&gt;[[FileSetAttrib]]&lt;/li&gt;
+&lt;li&gt;[[FileSetTime]]&lt;/li&gt;
+&lt;li&gt;[[If[Not]Exist]]&lt;/li&gt;
+&lt;li&gt;[[IniDelete]]&lt;/li&gt;
+&lt;li&gt;[[IniRead]]&lt;/li&gt;
+&lt;li&gt;[[IniWrite]]&lt;/li&gt;
+&lt;li&gt;[[Long Paths]]&lt;/li&gt;
+&lt;li&gt;[[Loop (files &amp; folders)]]&lt;/li&gt;
+&lt;li&gt;[[Loop (read file contents)]]&lt;/li&gt;
+&lt;li&gt;[[SetWorkingDir]]&lt;/li&gt;
+&lt;li&gt;[[SplitPath]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup7&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Flow of Control {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup7&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[#Include[Again]]]&lt;/li&gt;
+&lt;li&gt;[[{ ... } (block)]]&lt;/li&gt;
+&lt;li&gt;[[Break]]&lt;/li&gt;
+&lt;li&gt;[[Catch]]&lt;/li&gt;
+&lt;li&gt;[[Continue]]&lt;/li&gt;
+&lt;li&gt;[[Critical]]&lt;/li&gt;
+&lt;li&gt;[[Else]]&lt;/li&gt;
+&lt;li&gt;[[Exit]]&lt;/li&gt;
+&lt;li&gt;[[ExitApp]]&lt;/li&gt;
+&lt;li&gt;[[Finally]]&lt;/li&gt;
+&lt;li&gt;[[For-loop]]&lt;/li&gt;
+&lt;li&gt;[[Gosub]]&lt;/li&gt;
+&lt;li&gt;[[Goto]]&lt;/li&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup8&quot;&gt;&gt;&gt;
+[[If]] {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup8&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[If (traditional)]]&lt;/li&gt;
+&lt;li&gt;[[If (expression)]]&lt;/li&gt;
+&lt;li&gt;[[If var [not] between Low and High]]&lt;/li&gt;
+&lt;li&gt;[[If var is [not] type]]&lt;/li&gt;
+&lt;li&gt;[[If var [not] in/contains MatchList]]&lt;/li&gt;
+&lt;li&gt;[[If[Not]Exist]]&lt;/li&gt;
+&lt;li&gt;[[If[Not]InString]]&lt;/li&gt;
+&lt;li&gt;[[IfMsgBox]]&lt;/li&gt;
+&lt;li&gt;[[IfWin[Not]Active]]&lt;/li&gt;
+&lt;li&gt;[[IfWin[Not]Exist]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup9&quot;&gt;&gt;&gt;
+[[Loop]] {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup9&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Loop (files &amp; folders)]]&lt;/li&gt;
+&lt;li&gt;[[Loop (parse a string)]]&lt;/li&gt;
+&lt;li&gt;[[Loop (read file contents)]]&lt;/li&gt;
+&lt;li&gt;[[Loop (registry)]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;li&gt;[[OnError()]]&lt;/li&gt;
+&lt;li&gt;[[OnExit]]&lt;/li&gt;
+&lt;li&gt;[[Pause]]&lt;/li&gt;
+&lt;li&gt;[[Reload]]&lt;/li&gt;
+&lt;li&gt;[[Return]]&lt;/li&gt;
+&lt;li&gt;[[SetBatchLines]]&lt;/li&gt;
+&lt;li&gt;[[SetTimer]]&lt;/li&gt;
+&lt;li&gt;[[Sleep]]&lt;/li&gt;
+&lt;li&gt;[[Suspend]]&lt;/li&gt;
+&lt;li&gt;[[Switch]]&lt;/li&gt;
+&lt;li&gt;[[Thread]]&lt;/li&gt;
+&lt;li&gt;[[Throw]]&lt;/li&gt;
+&lt;li&gt;[[Try]]&lt;/li&gt;
+&lt;li&gt;[[Until]]&lt;/li&gt;
+&lt;li&gt;[[While-loop]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup10&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Graphical User Interfaces {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup10&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[FileSelectFile]]&lt;/li&gt;
+&lt;li&gt;[[FileSelectFolder]]&lt;/li&gt;
+&lt;li&gt;[[Gui]]&lt;/li&gt;
+&lt;li&gt;[[Gui control types]]&lt;/li&gt;
+&lt;li&gt;[[GuiControl]]&lt;/li&gt;
+&lt;li&gt;[[GuiControlGet]]&lt;/li&gt;
+&lt;li&gt;[[Gui ListView control]]&lt;/li&gt;
+&lt;li&gt;[[Gui TreeView control]]&lt;/li&gt;
+&lt;li&gt;[[IfMsgBox]]&lt;/li&gt;
+&lt;li&gt;[[Image Handles]]&lt;/li&gt;
+&lt;li&gt;[[InputBox]]&lt;/li&gt;
+&lt;li&gt;[[LoadPicture()]]&lt;/li&gt;
+&lt;li&gt;[[Menu]]&lt;/li&gt;
+&lt;li&gt;[[MenuGetHandle()]]&lt;/li&gt;
+&lt;li&gt;[[MenuGetName()]]&lt;/li&gt;
+&lt;li&gt;[[MsgBox]]&lt;/li&gt;
+&lt;li&gt;[[OnMessage()]]&lt;/li&gt;
+&lt;li&gt;[[Progress]]&lt;/li&gt;
+&lt;li&gt;[[SplashImage]]&lt;/li&gt;
+&lt;li&gt;[[SplashTextOn/SplashTextOff]]&lt;/li&gt;
+&lt;li&gt;[[Standard Windows Fonts]]&lt;/li&gt;
+&lt;li&gt;[[Styles for a window/control]]&lt;/li&gt;
+&lt;li&gt;[[ToolTip]]&lt;/li&gt;
+&lt;li&gt;[[TrayTip]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup11&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 [[Maths]] {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup11&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Abs()]]&lt;/li&gt;
+&lt;li&gt;[[Ceil()]]&lt;/li&gt;
+&lt;li&gt;[[EnvAdd (and date math)]]&lt;/li&gt;
+&lt;li&gt;[[EnvDiv]]&lt;/li&gt;
+&lt;li&gt;[[EnvMult]]&lt;/li&gt;
+&lt;li&gt;[[EnvSub (and date diff)]]&lt;/li&gt;
+&lt;li&gt;[[Exp()]]&lt;/li&gt;
+&lt;li&gt;[[Floor()]]&lt;/li&gt;
+&lt;li&gt;[[Log()]]&lt;/li&gt;
+&lt;li&gt;[[Ln()]]&lt;/li&gt;
+&lt;li&gt;[[Max()]]&lt;/li&gt;
+&lt;li&gt;[[Min()]]&lt;/li&gt;
+&lt;li&gt;[[Mod()]]&lt;/li&gt;
+&lt;li&gt;[[Random]]&lt;/li&gt;
+&lt;li&gt;[[Round()]]&lt;/li&gt;
+&lt;li&gt;[[SetFormat]]&lt;/li&gt;
+&lt;li&gt;[[Sqrt()]]&lt;/li&gt;
+&lt;li&gt;[[Sin() / Cos() / Tan()]]&lt;/li&gt;
+&lt;li&gt;[[ASin() / ACos() / ATan()]]&lt;/li&gt;
+&lt;li&gt;[[Transform]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup12&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Mouse and Keyboard {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup12&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup13&quot;&gt;&gt;&gt;
+[[Hotkeys and Hotstrings]] {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup13&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[#HotkeyInterval]]&lt;/li&gt;
+&lt;li&gt;[[#HotkeyModifierTimeout]]&lt;/li&gt;
+&lt;li&gt;[[#Hotstring]]&lt;/li&gt;
+&lt;li&gt;[[#If]]&lt;/li&gt;
+&lt;li&gt;[[#IfTimeOut]]&lt;/li&gt;
+&lt;li&gt;[[#IfWin[Not]Active]]&lt;/li&gt;
+&lt;li&gt;[[#IfWin[Not]Exist]]&lt;/li&gt;
+&lt;li&gt;[[#InputLevel]]&lt;/li&gt;
+&lt;li&gt;[[#MaxHotkeysPerInterval]]&lt;/li&gt;
+&lt;li&gt;[[#MaxThreads]]&lt;/li&gt;
+&lt;li&gt;[[#MaxThreadsBuffer]]&lt;/li&gt;
+&lt;li&gt;[[#MaxThreadsPerHotkey]]&lt;/li&gt;
+&lt;li&gt;[[#MenuMaskKey]]&lt;/li&gt;
+&lt;li&gt;[[#UseHook]]&lt;/li&gt;
+&lt;li&gt;[[Hotkey]]&lt;/li&gt;
+&lt;li&gt;[[Hotstring()]]&lt;/li&gt;
+&lt;li&gt;[[Hotstrings &amp; auto-replace]]&lt;/li&gt;
+&lt;li&gt;[[ListHotkeys]]&lt;/li&gt;
+&lt;li&gt;[[Suspend]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;li&gt;[[#InstallKeybdHook]]&lt;/li&gt;
+&lt;li&gt;[[#InstallMouseHook]]&lt;/li&gt;
+&lt;li&gt;[[#KeyHistory]]&lt;/li&gt;
+&lt;li&gt;[[BlockInput]]&lt;/li&gt;
+&lt;li&gt;[[Click]]&lt;/li&gt;
+&lt;li&gt;[[ControlClick]]&lt;/li&gt;
+&lt;li&gt;[[ControlSend[Raw]]]&lt;/li&gt;
+&lt;li&gt;[[CoordMode]]&lt;/li&gt;
+&lt;li&gt;[[GetKeyName()]]&lt;/li&gt;
+&lt;li&gt;[[GetKeySC()]]&lt;/li&gt;
+&lt;li&gt;[[GetKeyState]]&lt;/li&gt;
+&lt;li&gt;[[GetKeyVK()]]&lt;/li&gt;
+&lt;li&gt;[[List of Keys]]&lt;/li&gt;
+&lt;li&gt;[[KeyHistory]]&lt;/li&gt;
+&lt;li&gt;[[KeyWait]]&lt;/li&gt;
+&lt;li&gt;[[Input]]&lt;/li&gt;
+&lt;li&gt;[[InputHook()]]&lt;/li&gt;
+&lt;li&gt;[[MouseClick]]&lt;/li&gt;
+&lt;li&gt;[[MouseClickDrag]]&lt;/li&gt;
+&lt;li&gt;[[MouseGetPos]]&lt;/li&gt;
+&lt;li&gt;[[MouseMove]]&lt;/li&gt;
+&lt;li&gt;[[Send[Raw|Input|Play|Event]]]&lt;/li&gt;
+&lt;li&gt;[[SendLevel]]&lt;/li&gt;
+&lt;li&gt;[[SendMode]]&lt;/li&gt;
+&lt;li&gt;[[SetCapsLockState]]&lt;/li&gt;
+&lt;li&gt;[[SetDefaultMouseSpeed]]&lt;/li&gt;
+&lt;li&gt;[[SetKeyDelay]]&lt;/li&gt;
+&lt;li&gt;[[SetMouseDelay]]&lt;/li&gt;
+&lt;li&gt;[[SetNumLockState]]&lt;/li&gt;
+&lt;li&gt;[[SetScrollLockState]]&lt;/li&gt;
+&lt;li&gt;[[SetStoreCapsLockMode]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup14&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Misc. {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup14&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[AutoTrim]]&lt;/li&gt;
+&lt;li&gt;[[Edit]]&lt;/li&gt;
+&lt;li&gt;[[Func()]]&lt;/li&gt;
+&lt;li&gt;[[IsByRef()]]&lt;/li&gt;
+&lt;li&gt;[[IsFunc()]]&lt;/li&gt;
+&lt;li&gt;[[IsLabel()]]&lt;/li&gt;
+&lt;li&gt;[[IsObject()]]&lt;/li&gt;
+&lt;li&gt;[[ListLines]]&lt;/li&gt;
+&lt;li&gt;[[ListVars]]&lt;/li&gt;
+&lt;li&gt;[[OutputDebug]]&lt;/li&gt;
+&lt;li&gt;[[Transform]]&lt;/li&gt;
+&lt;li&gt;[[URLDownloadToFile]]&lt;/li&gt;
+&lt;li&gt;[[VarSetCapacity()]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup15&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Object Types {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup15&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Object]]&lt;/li&gt;
+&lt;li&gt;[[Enumerator Object]]&lt;/li&gt;
+&lt;li&gt;[[Exception Object]]&lt;/li&gt;
+&lt;li&gt;[[File Object]]&lt;/li&gt;
+&lt;li&gt;[[Func Object]]&lt;/li&gt;
+&lt;li&gt;[[Function Objects]]&lt;/li&gt;
+&lt;li&gt;[[RegExMatch Object]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup16&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Process {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup16&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Process]]&lt;/li&gt;
+&lt;li&gt;[[Run[Wait]]]&lt;/li&gt;
+&lt;li&gt;[[RunAs]]&lt;/li&gt;
+&lt;li&gt;[[Shutdown]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup17&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Registry {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup17&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Loop (registry)]]&lt;/li&gt;
+&lt;li&gt;[[RegDelete]]&lt;/li&gt;
+&lt;li&gt;[[RegRead]]&lt;/li&gt;
+&lt;li&gt;[[RegWrite]]&lt;/li&gt;
+&lt;li&gt;[[SetRegView]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup18&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Screen {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup18&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[ImageSearch]]&lt;/li&gt;
+&lt;li&gt;[[PixelGetColor]]&lt;/li&gt;
+&lt;li&gt;[[PixelSearch]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup19&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Sound {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup19&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[SoundBeep]]&lt;/li&gt;
+&lt;li&gt;[[SoundGet]]&lt;/li&gt;
+&lt;li&gt;[[SoundGetWaveVolume]]&lt;/li&gt;
+&lt;li&gt;[[SoundPlay]]&lt;/li&gt;
+&lt;li&gt;[[SoundSet]]&lt;/li&gt;
+&lt;li&gt;[[SoundSetWaveVolume]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup20&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 String {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup20&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Asc()]]&lt;/li&gt;
+&lt;li&gt;[[Chr()]]&lt;/li&gt;
+&lt;li&gt;[[Format()]]&lt;/li&gt;
+&lt;li&gt;[[FormatTime]]&lt;/li&gt;
+&lt;li&gt;[[If[Not]InString]]&lt;/li&gt;
+&lt;li&gt;[[If var [not] in/contains MatchList]]&lt;/li&gt;
+&lt;li&gt;[[InStr()]]&lt;/li&gt;
+&lt;li&gt;[[Loop (parse a string)]]&lt;/li&gt;
+&lt;li&gt;[[Ord()]]&lt;/li&gt;
+&lt;li&gt;[[RegEx Quick Reference]]&lt;/li&gt;
+&lt;li&gt;[[RegExMatch()]]&lt;/li&gt;
+&lt;li&gt;[[RegExReplace()]]&lt;/li&gt;
+&lt;li&gt;[[SetEnv (var = value)]]&lt;/li&gt;
+&lt;li&gt;[[SetFormat]]&lt;/li&gt;
+&lt;li&gt;[[Sort]]&lt;/li&gt;
+&lt;li&gt;[[StringCaseSense]]&lt;/li&gt;
+&lt;li&gt;[[StringGetPos]]&lt;/li&gt;
+&lt;li&gt;[[StringLeft/StringRight]]&lt;/li&gt;
+&lt;li&gt;[[StringLen]]&lt;/li&gt;
+&lt;li&gt;[[StringLower/StringUpper]]&lt;/li&gt;
+&lt;li&gt;[[StringMid]]&lt;/li&gt;
+&lt;li&gt;[[StringReplace]]&lt;/li&gt;
+&lt;li&gt;[[StringSplit]]&lt;/li&gt;
+&lt;li&gt;[[StringTrimLeft/StringTrimRight]]&lt;/li&gt;
+&lt;li&gt;[[StrGet()]]&lt;/li&gt;
+&lt;li&gt;[[StrLen()]]&lt;/li&gt;
+&lt;li&gt;[[StrPut()]]&lt;/li&gt;
+&lt;li&gt;[[StrReplace()]]&lt;/li&gt;
+&lt;li&gt;[[StrSplit()]]&lt;/li&gt;
+&lt;li&gt;[[SubStr()]]&lt;/li&gt;
+&lt;li&gt;[[Trim() / LTrim() / RTrim()]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup21&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 Window {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup21&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup22&quot;&gt;&gt;&gt;
+Controls {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup22&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Control]]&lt;/li&gt;
+&lt;li&gt;[[ControlClick]]&lt;/li&gt;
+&lt;li&gt;[[ControlFocus]]&lt;/li&gt;
+&lt;li&gt;[[ControlGet]]&lt;/li&gt;
+&lt;li&gt;[[ControlGetFocus]]&lt;/li&gt;
+&lt;li&gt;[[ControlGetPos]]&lt;/li&gt;
+&lt;li&gt;[[ControlGetText]]&lt;/li&gt;
+&lt;li&gt;[[ControlMove]]&lt;/li&gt;
+&lt;li&gt;[[ControlSend[Raw]]]&lt;/li&gt;
+&lt;li&gt;[[ControlSetText]]&lt;/li&gt;
+&lt;li&gt;[[Menu]]&lt;/li&gt;
+&lt;li&gt;[[PostMessage/SendMessage]]&lt;/li&gt;
+&lt;li&gt;[[SetControlDelay]]&lt;/li&gt;
+&lt;li&gt;[[WinMenuSelectItem]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup23&quot;&gt;&gt;&gt;
+Window Groups {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup23&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[GroupActivate]]&lt;/li&gt;
+&lt;li&gt;[[GroupAdd]]&lt;/li&gt;
+&lt;li&gt;[[GroupClose]]&lt;/li&gt;
+&lt;li&gt;[[GroupDeactivate]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;li&gt;[[Window Titles]]&lt;/li&gt;
+&lt;li&gt;[[#WinActivateForce]]&lt;/li&gt;
+&lt;li&gt;[[DetectHiddenText]]&lt;/li&gt;
+&lt;li&gt;[[DetectHiddenWindows]]&lt;/li&gt;
+&lt;li&gt;[[IfWin[Not]Active]]&lt;/li&gt;
+&lt;li&gt;[[IfWin[Not]Exist]]&lt;/li&gt;
+&lt;li&gt;[[SetTitleMatchMode]]&lt;/li&gt;
+&lt;li&gt;[[SetWinDelay]]&lt;/li&gt;
+&lt;li&gt;[[StatusBarGetText]]&lt;/li&gt;
+&lt;li&gt;[[StatusBarWait]]&lt;/li&gt;
+&lt;li&gt;[[WinActivate]]&lt;/li&gt;
+&lt;li&gt;[[WinActivateBottom]]&lt;/li&gt;
+&lt;li&gt;[[WinActive()]]&lt;/li&gt;
+&lt;li&gt;[[WinClose]]&lt;/li&gt;
+&lt;li&gt;[[WinExist()]]&lt;/li&gt;
+&lt;li&gt;[[WinGet]]&lt;/li&gt;
+&lt;li&gt;[[WinGetActiveStats]]&lt;/li&gt;
+&lt;li&gt;[[WinGetActiveTitle]]&lt;/li&gt;
+&lt;li&gt;[[WinGetClass]]&lt;/li&gt;
+&lt;li&gt;[[WinGetPos]]&lt;/li&gt;
+&lt;li&gt;[[WinGetText]]&lt;/li&gt;
+&lt;li&gt;[[WinGetTitle]]&lt;/li&gt;
+&lt;li&gt;[[WinHide]]&lt;/li&gt;
+&lt;li&gt;[[WinKill]]&lt;/li&gt;
+&lt;li&gt;[[WinMaximize]]&lt;/li&gt;
+&lt;li&gt;[[WinMinimize]]&lt;/li&gt;
+&lt;li&gt;[[WinMinimizeAll[Undo]]]&lt;/li&gt;
+&lt;li&gt;[[WinMove]]&lt;/li&gt;
+&lt;li&gt;[[WinRestore]]&lt;/li&gt;
+&lt;li&gt;[[WinSet]]&lt;/li&gt;
+&lt;li&gt;[[WinSetTitle]]&lt;/li&gt;
+&lt;li&gt;[[WinShow]]&lt;/li&gt;
+&lt;li&gt;[[WinWait]]&lt;/li&gt;
+&lt;li&gt;[[WinWait[Not]Active]]&lt;/li&gt;
+&lt;li&gt;[[WinWaitClose]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup24&quot;&gt;&gt;&gt;
+
+!!.ToCLvl2 #Directives {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup24&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[#AllowSameLineComments]]&lt;/li&gt;
+&lt;li&gt;[[#ClipboardTimeout]]&lt;/li&gt;
+&lt;li&gt;[[#CommentFlag]]&lt;/li&gt;
+&lt;li&gt;[[#ErrorStdOut]]&lt;/li&gt;
+&lt;li&gt;[[#EscapeChar]]&lt;/li&gt;
+&lt;li&gt;[[#HotkeyInterval]]&lt;/li&gt;
+&lt;li&gt;[[#HotkeyModifierTimeout]]&lt;/li&gt;
+&lt;li&gt;[[#Hotstring]]&lt;/li&gt;
+&lt;li&gt;[[#If]]&lt;/li&gt;
+&lt;li&gt;[[#IfWin[Not]Active]]&lt;/li&gt;
+&lt;li&gt;[[#IfWin[Not]Exist]]&lt;/li&gt;
+&lt;li&gt;[[#IfTimeout]]&lt;/li&gt;
+&lt;li&gt;[[#Include[Again]]]&lt;/li&gt;
+&lt;li&gt;[[#InputLevel]]&lt;/li&gt;
+&lt;li&gt;[[#InstallKeybdHook]]&lt;/li&gt;
+&lt;li&gt;[[#InstallMouseHook]]&lt;/li&gt;
+&lt;li&gt;[[#KeyHistory]]&lt;/li&gt;
+&lt;li&gt;[[#MaxHotkeysPerInterval]]&lt;/li&gt;
+&lt;li&gt;[[#MaxMem]]&lt;/li&gt;
+&lt;li&gt;[[#MaxThreads]]&lt;/li&gt;
+&lt;li&gt;[[#MaxThreadsBuffer]]&lt;/li&gt;
+&lt;li&gt;[[#MaxThreadsPerHotkey]]&lt;/li&gt;
+&lt;li&gt;[[#MenuMaskKey]]&lt;/li&gt;
+&lt;li&gt;[[#NoEnv]]&lt;/li&gt;
+&lt;li&gt;[[#NoTrayIcon]]&lt;/li&gt;
+&lt;li&gt;[[#Persistent]]&lt;/li&gt;
+&lt;li&gt;[[#Requires]]&lt;/li&gt;
+&lt;li&gt;[[#SingleInstance]]&lt;/li&gt;
+&lt;li&gt;[[#UseHook]]&lt;/li&gt;
+&lt;li&gt;[[#Warn]]&lt;/li&gt;
+&lt;li&gt;[[#WinActivateForce]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup25&quot;&gt;&gt;&gt;
+
+!.ToCLvl1 Script Examples {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup25&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+
+!!.ToCLvl2 [[Run Multiple Parallel Scripts from a single Hotkey]]
+&lt;/$reveal&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</pre>
+</div>
 <div created="20200730171911992" modified="20200731151405033" tags="MetaToC ToC" title="Languages" type="text/vnd.tiddlywiki">
 <pre>! [[AutoHotkey|AutoHotkey ToC]]
 ! [[TiddlyWiki|TiddlyWiki ToC]]</pre>
@@ -13530,6 +14144,18 @@ q::Send, 1
 ```
 
 @@color:grey;,,source: {{!!sourceurl}},,@@</pre>
+</div>
+<div created="20200731151437207" modified="20200731151733218" title="TiddlyWiki ToC">
+<pre>&lt;ul style=&quot;list-style-type:none&quot;&gt;
+&lt;li&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup26&quot;&gt;&gt;&gt;
+
+!.ToCLvl1 References {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup26&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+
+[[Markup]]
+&lt;/$reveal&gt;</pre>
 </div>
 
 
