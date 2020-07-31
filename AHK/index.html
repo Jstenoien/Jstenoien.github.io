@@ -257,8 +257,6 @@ Error message and password prompt
 
 <li>$:/state/editpreviewtype</li>
 
-<li>$:/state/Link/-19523140/search</li>
-
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -501,11 +499,13 @@ Error message and password prompt
 
 <li>Black Line</li>
 
+<li>Display sourceurl field</li>
+
+<li>Draft of 'Run Multiple Parallel Scripts from a single Hotkey'</li>
+
 <li>Languages</li>
 
 <li>New Tiddler Template - Blank</li>
-
-<li>Run Multiple Parallel Scripts from a single Hotkey</li>
 
 </ul>
 </p>
@@ -10898,9 +10898,6 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div created="20200730135155038" modified="20200730135201358" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
 </div>
-<div created="20200731142745490" modified="20200731142745490" title="$:/state/Link/-19523140/search">
-<pre>https://www.autohotkey.com/boards/viewtopic.php?t=68332</pre>
-</div>
 <div created="20200730131912084" modified="20200730131912084" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
@@ -10937,7 +10934,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200731141519950" list="Languages [[AutoHotkey ToC]] [[Run Multiple Parallel Scripts from a single Hotkey]]" modified="20200731142706773" title="$:/StoryList">
+<div created="20200731143445626" list="Languages [[AutoHotkey ToC]] [[Draft of 'Run Multiple Parallel Scripts from a single Hotkey']] [[Display sourceurl field]]" modified="20200731143447810" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200730061927198" title="$:/temp/advancedsearch">
@@ -11001,7 +10998,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
     }
 }</pre>
 </div>
-<div created="20200730131828924" modified="20200731143406874" title="$:/temp/NewTagName">
+<div created="20200730131828924" modified="20200730171932080" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200730055215591" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200730055215591" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -12681,34 +12678,40 @@ Window Groups {{$:/core/images/fold-button}}
 &lt;hr&gt;
 &lt;/$list&gt;</pre>
 </div>
+<div caption="Display sourceurl Field" created="20200731144749519" modified="20200731145311022" tags="$:/tags/TextEditor/Snippet" title="Display sourceurl field">
+<pre>@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
+</div>
+<div created="20200731143457227" draft.of="Run Multiple Parallel Scripts from a single Hotkey" draft.title="Run Multiple Parallel Scripts from a single Hotkey" modified="20200731145251398" sourceurl="https://www.autohotkey.com/boards/viewtopic.php?t=68332" title="Draft of 'Run Multiple Parallel Scripts from a single Hotkey'">
+<pre>!Example:
+
+Instead of:
+
+```
+q::Send, 1
+
+q::Send, 1
+
+q::Send, 1
+```
+
+Each [[Hotkey|Hotkeys]] after the first needs to be preceded by a Tilde `~`
+
+```
+q::Send, 1
+
+~q::Send, 1
+
+~q::Send, 1
+```
+
+@@color:grey;,,source: {{!!sourceurl}},,@@
+</pre>
+</div>
 <div created="20200730171911992" modified="20200730172212111" tags="MetaToC ToC" title="Languages" type="text/vnd.tiddlywiki">
 <pre>! [[AutoHotkey|AutoHotkey ToC]]</pre>
 </div>
 <div created="20150121163820346" creator="inmysocks" modified="20150130011534507" modifier="inmysocks" tags="[[Icon Menus]]" title="New Tiddler Template - Blank">
 <pre></pre>
-</div>
-<div created="20200731142752382" modified="20200731143425035" tags="AutoHotkey Snippet Script" title="Run Multiple Parallel Scripts from a single Hotkey">
-<pre>&lt;span class=&quot;source&quot;&gt;Source: &lt;a href=&quot;https://www.autohotkey.com/boards/viewtopic.php?t=68332&quot;&gt;https://www.autohotkey.com/boards/viewtopic.php?t=68332&lt;/a&gt;&lt;/span&gt;
-&lt;h1&gt;Example:&lt;/h1&gt;
-Instead of:
-
-```
-q::Send,1
-
-q::Send,1
-
-q::Send,1
-```
-
-Subsequent Hotkeys need prefaced with a Tilde `~`
-
-```
-q::Send,1
-
-~q::Send,1
-
-~q::Send,1
-```</pre>
 </div>
 
 
