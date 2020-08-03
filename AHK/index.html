@@ -509,6 +509,8 @@ Error message and password prompt
 
 <li>Process AHK Official Documentation v1</li>
 
+<li>Regex ToC</li>
+
 <li>Run Multiple Parallel Scripts from a single Hotkey</li>
 
 <li>TiddlyWiki List Widget Filter Examples by tobibeer</li>
@@ -10932,7 +10934,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200803145121287" list="Languages [[TiddlyWiki ToC]]" modified="20200803145121287" title="$:/StoryList">
+<div created="20200803145121287" list="Languages [[Regex ToC]] [[TiddlyWiki ToC]]" modified="20200803145732031" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200731152016126" title="$:/temp/advancedsearch">
@@ -12915,6 +12917,19 @@ Gui, Show,, Process List
 
 ; Win32_Process: http://msdn.microsoft.com/en-us/library/aa394372.aspx
 ```</pre>
+</div>
+<div created="20200803145739935" modified="20200803150501791" title="Regex ToC">
+<pre>&lt;ul style=&quot;list-style-type:none&quot;&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
+
+!.ToCLvl1 Snippets {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Match Any Character Except x|Regex Match Any Character Except x]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
 </div>
 <div created="20200731143457227" modified="20200731145337437" sourceurl="https://www.autohotkey.com/boards/viewtopic.php?t=68332" title="Run Multiple Parallel Scripts from a single Hotkey">
 <pre>!Example:
