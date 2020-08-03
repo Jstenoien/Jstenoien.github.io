@@ -503,8 +503,6 @@ Error message and password prompt
 
 <li>Display sourceurl field</li>
 
-<li>Draft of 'Regex ToC'</li>
-
 <li>Languages</li>
 
 <li>New Tiddler Template - Blank</li>
@@ -10940,7 +10938,7 @@ The checkbox sets if the item is in the menu, the numbers in the `Order` column 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200803151114249" list="Languages [[Draft of 'Regex ToC']] [[Regex Match Anything not containing String foo]] [[Regex Match Any Character Except x]] [[TiddlyWiki ToC]]" modified="20200803152007585" title="$:/StoryList">
+<div created="20200803151114249" list="Languages [[Regex ToC]] [[Regex Match Any Character Except x]] [[TiddlyWiki ToC]]" modified="20200803152007585" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200730061921862" modified="20200731152016126" title="$:/temp/advancedsearch">
@@ -12686,29 +12684,6 @@ Window Groups {{$:/core/images/fold-button}}
 <div caption="Display sourceurl Field" created="20200731144749519" modified="20200731145311022" tags="$:/tags/TextEditor/Snippet" title="Display sourceurl field">
 <pre>@@color:grey;,,source: {{!!sourceurl}},,@@</pre>
 </div>
-<div created="20200803145739935" draft.of="Regex ToC" draft.title="Regex ToC" modified="20200803151954713" title="Draft of 'Regex ToC'">
-<pre>&lt;ul style=&quot;list-style-type:none&quot;&gt;
-&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
-
-!.ToCLvl1 Reference {{$:/core/images/fold-button}}
-&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;[[Special Characters|Regex Special Characters]]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/$reveal&gt;&lt;/li&gt;
-&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
-
-!.ToCLvl1 Snippets {{$:/core/images/fold-button}}
-&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;[[Match Any Character Except x|Regex Match Any Character Except x]]&lt;/li&gt;
-&lt;li&gt;[[Match Anything not containing String xyz|Match Anything not containing String xyz]]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/$reveal&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
-</div>
 <div created="20200730171911992" modified="20200803145723345" tags="MetaToC ToC" title="Languages" type="text/vnd.tiddlywiki">
 <pre>! [[Regex|Regex ToC]]
 ! [[AutoHotkey|AutoHotkey ToC]]
@@ -12987,8 +12962,18 @@ Matches any string not beginning with substring `foo`. In a multiline file/strin
 
 @@color:grey;,,source: {{!!sourceurl}},,@@</pre>
 </div>
-<div created="20200803145739935" modified="20200803150501791" title="Regex ToC">
+<div created="20200803145739935" modified="20200803163334357" title="Regex ToC">
 <pre>&lt;ul style=&quot;list-style-type:none&quot;&gt;
+&lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
+
+!.ToCLvl1 Reference {{$:/core/images/fold-button}}
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Special Characters|Regex Special Characters]]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://perldoc.perl.org/perlre.html#Modifiers&quot;&gt;perl RegEx Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/$reveal&gt;&lt;/li&gt;
 &lt;li&gt;&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
 
 !.ToCLvl1 Snippets {{$:/core/images/fold-button}}
@@ -12996,6 +12981,7 @@ Matches any string not beginning with substring `foo`. In a multiline file/strin
 &lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot; class=&quot;tc-popup tc-popup-keep&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;[[Match Any Character Except x|Regex Match Any Character Except x]]&lt;/li&gt;
+&lt;li&gt;[[Match Anything not containing String foo|Regex Match Anything not containing String foo]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/$reveal&gt;&lt;/li&gt;
 &lt;/ul&gt;</pre>
