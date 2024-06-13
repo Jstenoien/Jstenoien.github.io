@@ -1,13 +1,23 @@
 <html>
-<body>
-<div>
-<textarea id=input></textarea>
-</div>
-<div>
-<button id=decode onclick=decode()>Decode</button>
-</div>
-<div>
-<textarea id=view></textarea>
-</div>
-</body>
+  <header>
+    <script src="script.js"></script>
+    <script src="pako.js"></script>
+  </header>
+  <body>
+    <div>
+      <textarea id=input></textarea>
+    </div>
+    <div>
+      <button id=decode onclick=decode()>Decode</button>
+    </div>
+    <div>
+      <textarea id=view></textarea>
+    </div>
+    <div>
+      <button id=recode onclick=recode()>Recode</button>
+    </div>
+    <div>
+      <textarea id=output></textarea>
+    </div>
+  </body>
 </html>
